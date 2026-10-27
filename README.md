@@ -1,12 +1,20 @@
-# Dell Precision Tower 5810, BIOS A34: SMBIOS tokens and setup options
+# Dell Precision Tower 5810 and 7810, BIOS A34: SMBIOS tokens and setup options
 
-Decoded from a Precision Tower 5810 on BIOS A34 (`T5810A34.exe`) on 2026-10-26. All 232 tokens the BIOS lists are named:
-- 210 come from libsmbios;
-- 22 that libsmbios calls "unknown" are named here, from the BIOS image and read-only token reads.
+Decoded on 2026-10-26 from a Precision Tower 5810 (`T5810A34.exe`) and a Precision Tower 7810 (`T7810A34.exe`), both on BIOS A34.
+Their DA token tables, setting maps, `Setup` field maps and setup forms are identical; only which tokens are present differs
+(mostly the sensor slots). Every token both BIOSes list is named:
+
+| Model | Tokens listed | Named by libsmbios | Named here |
+|---|---|---|---|
+| T5810 | 232 | 210 | 22 |
+| T7810 | 236 | 210 | 26 |
+
+The extra names come from the BIOS images and read-only token reads. Upstream: [dell/libsmbios#157](https://github.com/dell/libsmbios/pull/157)
+adds them to `doc/token_list.csv`.
 
 | File | What |
 |---|---|
-| `tokens-decoded.tsv` | the 232 tokens. Columns: name; state on the dumped machine; value written; Dell setting ID; the `Setup` byte, field name and setup prompt the setting lands on; the machine's value there; evidence |
+| `t5810/tokens-decoded.tsv`, `t7810/tokens-decoded.tsv` | each model's tokens. Columns: name; state on that machine; value written; Dell setting ID; the `Setup` byte, field name and setup prompt the setting lands on; the machine's value there; evidence |
 | `setting-to-setup-map.tsv` | the BIOS's Dell setting ID → `Setup` byte table (144 records, from DellPolicyDxe; BindingsPei holds the same table) |
 | `DellSmbDaTokensConfig-records.tsv` | the BIOS's whole DA token table: token → value → Dell setting ID (954 records) |
 | `DellIntelMap.tsv` | the `Setup` variable's field names, offsets and sizes (the `DellIntelMap` EFI variable, EFI-compressed) |
@@ -42,8 +50,12 @@ Decoded from a Precision Tower 5810 on BIOS A34 (`T5810A34.exe`) on 2026-10-26. 
 | 0xF600 | EC fan 0 (processor fan): RPM | live reads 1005/1004/1000 matched `dell_smm` at the same moments. Public: DellFanManagement `Token.cs` Fan1Rpm = 0xF600 |
 | 0xF601 / 0xF602 / 0xF604 | EC fan 0: fields 1 / 2 / 4 | read 3 / 96 / 100; meaning unknown |
 
-Fields 1, 4, 6 and 7 of the temperature tokens and fields 3 and 5 of the fan token return "not supported" here. The sensor
-index s is the `dell_smm` (i8k) sensor index.
+Fields 1, 4, 6 and 7 of the temperature tokens and fields 3 and 5 of the fan tokens return "not supported". Temperature sensor s
+is `dell_smm` temp(s+1) and fan s is `dell_smm` fan(s+1):
+- **T5810:** sensors 0 (CPU), 2 and 3 (memory), and fan 0 (Processor Fan).
+- **T7810:** sensors 0 and 1 (CPUs), 3 and 4 (memory), and fan 3. F630 read 2547 RPM against `dell_smm` fan4's 2548; F110/F140 read 31/30 °C.
+
+The thresholds read the same on both: 92/102 °C on CPU sensors, 75/85 °C on memory sensors. On the T7810, PCIe LinkSpeed reads Auto (3).
 
 Sources: [HWiNFO forum thread](https://www.hwinfo.com/forum/threads/new-dell-systems-ec-sensor-values-not-available-fix.7482/),
 [DellFanManagement Token.cs](https://github.com/AaronKelley/DellFanManagement/blob/master/DellSmbiosSmiLib/DellSmi/Token.cs),
