@@ -35,7 +35,10 @@ adds them to `doc/token_list.csv`.
    `[setting ID u32][0x0010][Setup offset u16][size 1][attr 4]`: each setting is one byte of the AMI `Setup` variable
    (GUID `EC87D643-EBA4-4BB5-A1E5-3F3E36B20DA9`, 0x3F1 bytes). This was checked against 7 named settings and one NVRAM diff.
 5. **Exception.** Setting 0x0E1C has no `Setup` byte. It marks tokens answered in code: the 0xF1xx/0xF6xx embedded-controller sensor
-   reads, and the power-supply LED blink tokens.
+   reads, and the power-supply LED blink tokens. The sensor values come from `PwsEcSmm` (Dell Pws EC driver), which also carries
+   0x0E1C. That driver shadows the EC registers and holds the probe names `CPU_TEMPERATURE`, `VIDEO_TEMPERATURE` and `CPU_THROTTLE`.
+   The calling-interface handler just fetches the value by ID. Neither binary has a per-field switch, so the field meanings below
+   come from live reads.
 
 ## The 22 tokens named here
 
