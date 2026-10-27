@@ -1,50 +1,63 @@
 # Dell Precision Tower 5810, BIOS A34: SMBIOS tokens and setup options
 
-Decoded from a Precision Tower 5810 on BIOS A34 (`T5810A34.exe`), on 2026-10-26.
+Decoded from a Precision Tower 5810 on BIOS A34 (`T5810A34.exe`) on 2026-10-26. All 232 tokens the BIOS lists are named:
+- 210 come from libsmbios;
+- 22 that libsmbios calls "unknown" are named here, from the BIOS image and read-only token reads.
 
 | File | What |
 |---|---|
-| `tokens-decoded.tsv` | the 232 Dell SMBIOS (DA) tokens this BIOS lists: libsmbios name, state on the dumped machine, the value the BIOS writes, the Dell setting ID, the other tokens on that setting, and the evidence for the name |
-| `DellSmbDaTokensConfig-records.tsv` | the BIOS's whole DA token table (954 records): token, value, Dell setting ID |
+| `tokens-decoded.tsv` | the 232 tokens. Columns: name; state on the dumped machine; value written; Dell setting ID; the `Setup` byte, field name and setup prompt the setting lands on; the machine's value there; evidence |
+| `setting-to-setup-map.tsv` | the BIOS's Dell setting ID → `Setup` byte table (144 records, from DellPolicyDxe; BindingsPei holds the same table) |
+| `DellSmbDaTokensConfig-records.tsv` | the BIOS's whole DA token table: token → value → Dell setting ID (954 records) |
 | `DellIntelMap.tsv` | the `Setup` variable's field names, offsets and sizes (the `DellIntelMap` EFI variable, EFI-compressed) |
 | `setup-options.tsv` | every setup-form question (5,036): form, variable, offset, size, prompt, options with defaults |
 | `ifrq.awk` | the gawk that turns an IFRExtractor-RS text dump into `setup-options.tsv` |
+| `tools/daread.c` | read-only token read through the Dell calling interface (class 0 select 0): status, current, min, max. Builds against libsmbios (`smbios_c/smi.h`) |
+| `tools/policy-map-scan.c` | the byte scanner that found and decoded the setting map |
 
-## How
+## How a token turns into a setting
 
-- **Token list and names.** `smbios-token-ctl --dump-tokens` (libsmbios 2.4.3) names 210 of the 232 tokens; 22 are "unknown".
-- **Token table.** The DXE module `DellSmbDaTokensConfig` holds the DA token table as 10-byte records
-  `[token u16][value u16][Dell setting ID u16][0 u32]`. A token writes its value to its Dell setting; tokens that share
-  a setting ID are one setting's choices.
-- **What a setting ID is not.** The setting ID is not an offset into `Setup` or `IntelSetup`. No module carries a
-  setting-ID map as data (the config module's only string is `Setup`), so the SMM token handler resolves it in code.
-- **Setup options.** Extracted with UEFIExtract NE A76 and IFRExtractor-RS 1.6.1 from the A34 system BIOS
-  (unpacked with BIOSUtilities 25.7.1 `DellPfsExtract`). `Setup` and `IntelSetup` share the GUID
-  `EC87D643-EBA4-4BB5-A1E5-3F3E36B20DA9`; neither is visible to the OS.
+1. **Discovery.** SMBIOS type 218 (0xDA) structures list the supported tokens and the call: SMI port 0xB2, command 0x37.
+2. **The call.** A request buffer with signature `DSCI` carries class, select and arguments. Class 0 reads a token, class 1 writes it.
+   The SMM handler `DellSmBiosDaCiSmm` checks the buffer, keeps it out of SMRAM, and routes it by (class, select). It has no
+   per-token code.
+3. **Token → setting.** `DellSmbDaTokensConfig` holds 10-byte records `[token u16][value u16][Dell setting ID u16][0 u32]`.
+   Tokens that share a setting ID are one setting's choices. Value 0xFFFF marks a value token, which takes an arbitrary value.
+4. **Setting → storage.** `DellPolicyDxe` (and `BindingsPei`) hold 12-byte records
+   `[setting ID u32][0x0010][Setup offset u16][size 1][attr 4]`: each setting is one byte of the AMI `Setup` variable
+   (GUID `EC87D643-EBA4-4BB5-A1E5-3F3E36B20DA9`, 0x3F1 bytes). This was checked against 7 named settings and one NVRAM diff.
+5. **Exception.** Setting 0x0E1C has no `Setup` byte. It marks tokens answered in code: the 0xF1xx/0xF6xx embedded-controller sensor
+   reads, and the power-supply LED blink tokens.
 
-## Tokens named here
+## The 22 tokens named here
 
 | Token | Name | Evidence |
 |---|---|---|
-| 0x0487 | Master Password Lockout (Enabled) | activating it changed `Setup` 0x02D6 ("Enable Master Password Lockout") from 0 to 1 in the flash NVRAM |
-| 0x0488 | Master Password Lockout (Disabled) | the same setting (0x0733), value 0. The firmware does not take it from the OS: activating it is a no-op, so Lockout can be turned on but not off from the OS |
+| 0x0487 / 0x0488 | Master Password Lockout, Enabled / Disabled | setting 0x0733 = `Setup` 0x02D6 "Enable Master Password Lockout". Activating 0x0487 changed that byte 0 → 1 in the flash NVRAM. The firmware takes 0x0488 from the OS as a no-op, so the OS can turn it on but not off |
+| 0x0498 | UEFI Boot Path Security (value token) | setting 0x06DA = `Setup` 0x02D5: 0 Never, 1 Always, 2 Always Except Internal HDD. A live read gives 2 with a range of 0–2 |
+| 0x04A7 / 0x04A8 / 0x04A9 | PCIe LinkSpeed, Auto / Gen1 / Gen2 | setting 0x0E38 = `Setup` 0x005F "Pcie LinkSpeed" (3 Auto, 1 Gen1, 2 Gen2, 0 Gen3). Gen3 has no token; Dell Command \| Configure's `--PcieLinkSpeed` takes Auto, Gen1 and Gen2 only |
+| 0xF1s0 (s = 0, 2, 3) | EC temperature sensor s: reading = °C + 127 | live reads 172/159/163 matched `dell_smm` CPU/memory 45/32/36 °C (6 points). Public: HWiNFO forum thread 7482 |
+| 0xF1s3 / 0xF1s5 | EC temperature sensor s: two thresholds, likely warning / critical (°C + 127) | CPU 219/229 (92/102 °C), memory 202/212 (75/85 °C) |
+| 0xF1s2 | EC temperature sensor s: field 2 | reads 3 on every sensor; meaning unknown |
+| 0xF600 | EC fan 0 (processor fan): RPM | live reads 1005/1004/1000 matched `dell_smm` at the same moments. Public: DellFanManagement `Token.cs` Fan1Rpm = 0xF600 |
+| 0xF601 / 0xF602 / 0xF604 | EC fan 0: fields 1 / 2 / 4 | read 3 / 96 / 100; meaning unknown |
 
-## Still unnamed
+Fields 1, 4, 6 and 7 of the temperature tokens and fields 3 and 5 of the fan token return "not supported" here. The sensor
+index s is the `dell_smm` (i8k) sensor index.
 
-| Tokens | Setting ID | Why they stay unnamed |
-|---|---|---|
-| 0xF100-0xF135 (12) and 0xF600-0xF604 (4) | 0x0E1C, value 1, shared by the whole 0xF1xx/0xF6xx family in the table | Code-handled. Not activated, since a code-handled token can be an action |
-| 0x0498 | 0x06DA, value 0xFFFF | No token restores the current value, so activating one can't be undone from the OS. Not activated |
-| 0x04A7 / 0x04A8 / 0x04A9 | 0x0E38, values 3 / 1 / 2 | Same reason. Not activated |
+Sources: [HWiNFO forum thread](https://www.hwinfo.com/forum/threads/new-dell-systems-ec-sensor-values-not-available-fix.7482/),
+[DellFanManagement Token.cs](https://github.com/AaronKelley/DellFanManagement/blob/master/DellSmbiosSmiLib/DellSmi/Token.cs),
+[Dell Command | Configure --PcieLinkSpeed](https://www.dell.com/support/manuals/en-us/command-configure/dcc_5.x_ref_guide/-pcielinkspeed?guid=guid-5bf3f31f-58b2-49ff-9bfa-99f0280e2c0b&lang=en-us).
 
-## PCIe link options this BIOS has but no token reaches
+## PCIe link options this BIOS has
 
-- `IntelSetup`, per root port:
-  - "PCI-E Port" (0x072D-0x0736)
-  - "Link Speed" (0x0808-0x0812): Auto, Gen 1, Gen 2, Gen 3
+- **`Setup`:**
+  - "Pcie LinkSpeed" 0x5F: tokens 0x04A7-0x04A9; Gen3 has no token.
+  - Link Training Retry 0x38, Link Training Timeout 0x39, Unpopulated Links 0x3B, Target Link Speed 0x45: no tokens.
+- **`IntelSetup`, per root port (no tokens):**
+  - "PCI-E Port" 0x072D-0x0736
+  - "Link Speed" 0x0808-0x0812: Auto, Gen 1, Gen 2, Gen 3
   - "Override Max Link Width": Auto, x1-x16
-  - Port 3A (D03F0) is the CPU's third x16 port.
-- `Setup`: Link Training Retry (0x38), Link Training Timeout (0x39), Unpopulated Links (0x3B), Target Link Speed (0x45),
-  "Pcie LinkSpeed" (0x5F: 0 Gen3, 1 Gen1, 2 Gen2, 3 Auto).
+  - "Hot Plug Capable"
 
 🤖 Generated with [Claude Code](https://claude.com/claude-code)

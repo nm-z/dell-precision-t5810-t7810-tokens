@@ -1,233 +1,233 @@
-0x0005	Serial Port 1 (COM2)	false	0x0003	0x0402	0006 Serial Port 1 (COM4); 000F Serial Port 1 (Disable); 0011 Serial Port 1 (COM1); 0012 Serial Port 1 (COM3)	evidence
-0x0006	Serial Port 1 (COM4)	false	0x0005	0x0402	0005 Serial Port 1 (COM2); 000F Serial Port 1 (Disable); 0011 Serial Port 1 (COM1); 0012 Serial Port 1 (COM3)	libsmbios name + BIOS DA table
-0x000F	Serial Port 1 (Disable)	true	0x0000	0x0402	0005 Serial Port 1 (COM2); 0006 Serial Port 1 (COM4); 0011 Serial Port 1 (COM1); 0012 Serial Port 1 (COM3)	libsmbios name + BIOS DA table
-0x0011	Serial Port 1 (COM1)	false	0x0002	0x0402	0005 Serial Port 1 (COM2); 0006 Serial Port 1 (COM4); 000F Serial Port 1 (Disable); 0012 Serial Port 1 (COM3)	libsmbios name + BIOS DA table
-0x0012	Serial Port 1 (COM3)	false	0x0004	0x0402	0005 Serial Port 1 (COM2); 0006 Serial Port 1 (COM4); 000F Serial Port 1 (Disable); 0011 Serial Port 1 (COM1)	libsmbios name + BIOS DA table
-0x0022	Sound Device (Enable)	true	0x0001	0x0A07	0023 Sound Device (Disable)	libsmbios name + BIOS DA table
-0x0023	Sound Device (Disable)	false	0x0000	0x0A07	0022 Sound Device (Enable)	libsmbios name + BIOS DA table
-0x0028	Auto-on (Disable)	true	0x0000	0x0411	0029 Auto-on (Every Day); 002A Auto-on (Weekdays); 0312 Auto-on (DayControl)	libsmbios name + BIOS DA table
-0x0029	Auto-on (Every Day)	false	0x0001	0x0411	0028 Auto-on (Disable); 002A Auto-on (Weekdays); 0312 Auto-on (DayControl)	libsmbios name + BIOS DA table
-0x002A	Auto-on (Weekdays)	false	0x0002	0x0411	0028 Auto-on (Disable); 0029 Auto-on (Every Day); 0312 Auto-on (DayControl)	libsmbios name + BIOS DA table
-0x002B	Auto-on Hour (n/a)	false	0xFFFF	0x0476		libsmbios name + BIOS DA table
-0x002C	Auto-on Minute (n/a)	false	0xFFFF	0x0477		libsmbios name + BIOS DA table
-0x002D	Embedded NIC1 (Enable with PXE)	false	0x0002	0x0412	002E Embedded NIC1 (Disable); 006E Embedded NIC1 (Enable without Boot Support)	libsmbios name + BIOS DA table
-0x002E	Embedded NIC1 (Disable)	false	0x0000	0x0412	002D Embedded NIC1 (Enable with PXE); 006E Embedded NIC1 (Enable without Boot Support)	libsmbios name + BIOS DA table
-0x0042	Num Lock (Enable)	true	0x0001	0x0420	0043 Num Lock (Disable)	libsmbios name + BIOS DA table
-0x0043	Num Lock (Disable)	false	0x0000	0x0420	0042 Num Lock (Enable)	libsmbios name + BIOS DA table
-0x0055	Wake-on-LAN (Disabled)	false	0x0000	0x0478	006D Wake-on-LAN (Enabled); 0383 Wake On Lan (LAN with PXE Boot)	libsmbios name + BIOS DA table
-0x005C	Remote BIOS Update (Enable)	false	0x0001	0x0458	005D Remote BIOS Update (Disable)	libsmbios name + BIOS DA table
-0x005D	Remote BIOS Update (Disable)	true	0x0000	0x0458	005C Remote BIOS Update (Enable)	libsmbios name + BIOS DA table
-0x006D	Wake-on-LAN (Enabled)	true	0x0005	0x0478	0055 Wake-on-LAN (Disabled); 0383 Wake On Lan (LAN with PXE Boot)	libsmbios name + BIOS DA table
-0x006E	Embedded NIC1 (Enable without Boot Support)	true	0x0001	0x0412	002D Embedded NIC1 (Enable with PXE); 002E Embedded NIC1 (Disable)	libsmbios name + BIOS DA table
-0x007D	LCD Brightness (Value)		0xFFFF	0x0079		libsmbios name + BIOS DA table
-0x0087	Boot-time Video (Onboard)	false	0x0000	0x0470	0088 Boot-time Video (Add-in)	libsmbios name + BIOS DA table
-0x0088	Boot-time Video (Add-in)	true	0x0001	0x0470	0087 Boot-time Video (Onboard)	libsmbios name + BIOS DA table
-0x0090	Chassis Intrusion Reporting (Enabled)	false	0x0001	0x0486	0091 Chassis Intrusion Reporting (Disabled); 0092 Chassis Intrusion Reporting (Enabled, Silent)	libsmbios name + BIOS DA table
-0x0091	Chassis Intrusion Reporting (Disabled)	false	0x0000	0x0486	0090 Chassis Intrusion Reporting (Enabled); 0092 Chassis Intrusion Reporting (Enabled, Silent)	libsmbios name + BIOS DA table
-0x0092	Chassis Intrusion Reporting (Enabled, Silent)	true	0x0002	0x0486	0090 Chassis Intrusion Reporting (Enabled); 0091 Chassis Intrusion Reporting (Disabled)	libsmbios name + BIOS DA table
-0x0093	Force PXE on Next Boot (Enabled)	false	0x0001	0x0459	0094 Force PXE on Next Boot (Disabled)	libsmbios name + BIOS DA table
-0x0094	Force PXE on Next Boot (Disabled)	true	0x0000	0x0459	0093 Force PXE on Next Boot (Enabled)	libsmbios name + BIOS DA table
-0x0097	PCI Slots (Enabled)	false	0x0001	0x040A	0098 PCI Slots (Disabled)	libsmbios name + BIOS DA table
-0x0098	PCI Slots (Disabled)	true	0x0000	0x040A	0097 PCI Slots (Enabled)	libsmbios name + BIOS DA table
-0x009B	USB Emulation, USB Boot Capable (Enabled)	true	0x0001	0x0430	009C USB Emulation (Disabled)	libsmbios name + BIOS DA table
-0x009C	USB Emulation (Disabled)	false	0x0000	0x0430	009B USB Emulation, USB Boot Capable (Enabled)	libsmbios name + BIOS DA table
-0x009D	Keyboard Error Reporting (Enabled)	false	0x0001	0x0436	009E Keyboard Error Reporting (Disabled)	libsmbios name + BIOS DA table
-0x009E	Keyboard Error Reporting (Disabled)	true	0x0000	0x0436	009D Keyboard Error Reporting (Enabled)	libsmbios name + BIOS DA table
-0x009F	Password Status Lock (Locked)	false	0x0000	0x0644	00A0 Password Status Lock (Unlocked)	libsmbios name + BIOS DA table
-0x00A0	Password Status Lock (Unlocked)	true	0x0001	0x0644	009F Password Status Lock (Locked)	libsmbios name + BIOS DA table
-0x00A1	AC Power Recovery Mode (Off)	false	0x0000	0x0445	00A3 AC Power Recovery Mode (On); 00A2 AC Power Recovery Mode (Last)	libsmbios name + BIOS DA table
-0x00A2	AC Power Recovery Mode (Last)	false	0x0002	0x0445	00A1 AC Power Recovery Mode (Off); 00A3 AC Power Recovery Mode (On)	libsmbios name + BIOS DA table
-0x00A3	AC Power Recovery Mode (On)	true	0x0001	0x0445	00A1 AC Power Recovery Mode (Off); 00A2 AC Power Recovery Mode (Last)	libsmbios name + BIOS DA table
-0x00D1	CPU HyperThreading (Enabled)	true	0x0001	0x0473	00D2 CPU HyperThreading (Disabled)	libsmbios name + BIOS DA table
-0x00D2	CPU HyperThreading (Disabled)	false	0x0000	0x0473	00D1 CPU HyperThreading (Enabled)	libsmbios name + BIOS DA table
-0x00E4	F12 Post Display (Enabled)	false	0x0001	0x043E	00E5 F12 Post Display (Disabled)	libsmbios name + BIOS DA table
-0x00E5	F12 Post Display (Disabled)	true	0x0000	0x043E	00E4 F12 Post Display (Enabled)	libsmbios name + BIOS DA table
-0x00EA	POST Boot Testing (Minimal)	true	0x0000	0x0450	00EB POST Boot Testing (Thorough); 00EC POST Boot Testing (Automatic)	libsmbios name + BIOS DA table
-0x00EB	POST Boot Testing (Thorough)	false	0x0001	0x0450	00EA POST Boot Testing (Minimal); 00EC POST Boot Testing (Automatic)	libsmbios name + BIOS DA table
-0x00EC	POST Boot Testing (Automatic)	false	0x0002	0x0450	00EA POST Boot Testing (Minimal); 00EB POST Boot Testing (Thorough)	libsmbios name + BIOS DA table
-0x00ED	SpeedStep (Disabled)	false	0x0000	0x0C74	00F0 SpeedStep (Automatic)	libsmbios name + BIOS DA table
-0x00F0	SpeedStep (Automatic)	true	0x0001	0x0C74	00ED SpeedStep (Disabled)	libsmbios name + BIOS DA table
-0x00F5	Low Power Mode (Enabled)	false	0x0004	0x042A	00F6 Low Power Mode (Disabled); 030F Low Power Mode (S5Only)	libsmbios name + BIOS DA table
-0x00F6	Low Power Mode (Disabled)	true	0x0000	0x042A	00F5 Low Power Mode (Enabled); 030F Low Power Mode (S5Only)	libsmbios name + BIOS DA table
-0x0117	Serial ATA Drive 0 (OFF)	false	0x0000	0x0460	0118 Serial ATA Drive 0 (AUTO)	libsmbios name + BIOS DA table
-0x0118	Serial ATA Drive 0 (AUTO)	true	0x0001	0x0460	0117 Serial ATA Drive 0 (OFF)	libsmbios name + BIOS DA table
-0x0119	Serial ATA Drive 1 (OFF)	false	0x0000	0x0461	011A Serial ATA Drive 1 (AUTO)	libsmbios name + BIOS DA table
-0x011A	Serial ATA Drive 1 (AUTO)	true	0x0001	0x0461	0119 Serial ATA Drive 1 (OFF)	libsmbios name + BIOS DA table
-0x011B	Serial ATA Drive 2 (OFF)	false	0x0000	0x0462	011C Serial ATA Drive 2 (AUTO)	libsmbios name + BIOS DA table
-0x011C	Serial ATA Drive 2 (AUTO)	true	0x0001	0x0462	011B Serial ATA Drive 2 (OFF)	libsmbios name + BIOS DA table
-0x011D	Serial ATA Drive 3 (OFF)	false	0x0000	0x0463	011E Serial ATA Drive 3 (AUTO)	libsmbios name + BIOS DA table
-0x011E	Serial ATA Drive 3 (AUTO)	true	0x0001	0x0463	011D Serial ATA Drive 3 (OFF)	libsmbios name + BIOS DA table
-0x011F	Serial ATA Drive 4 (OFF)	false	0x0000	0x0464	0120 Serial ATA Drive 4 (AUTO)	libsmbios name + BIOS DA table
-0x0120	Serial ATA Drive 4 (AUTO)	true	0x0001	0x0464	011F Serial ATA Drive 4 (OFF)	libsmbios name + BIOS DA table
-0x0121	Serial ATA Drive 5 (OFF)	false	0x0000	0x0465	0122 Serial ATA Drive 5 (AUTO)	libsmbios name + BIOS DA table
-0x0122	Serial ATA Drive 5 (AUTO)	true	0x0001	0x0465	0121 Serial ATA Drive 5 (OFF)	libsmbios name + BIOS DA table
-0x012B	SMART Errors (Enable)	false	0x0001	0x045B	012C SMART Errors (Disable)	libsmbios name + BIOS DA table
-0x012C	SMART Errors (Disable)	true	0x0000	0x045B	012B SMART Errors (Enable)	libsmbios name + BIOS DA table
-0x012D	Energy Star Logo (Enable)	false	0x0001	0x0481	012E Energy Star Logo (Disable)	libsmbios name + BIOS DA table
-0x012E	Energy Star Logo (Disable)	true	0x0000	0x0481	012D Energy Star Logo (Enable)	libsmbios name + BIOS DA table
-0x0135	SATA Controller (OFF)	false	0x00FF	0x045A	0137 SATA Controller (ATA); 0138 SATA Controller (AHCI); 0139 SATA Controller (RAID)	libsmbios name + BIOS DA table
-0x0137	SATA Controller (ATA)	false	0x0000	0x045A	0135 SATA Controller (OFF); 0138 SATA Controller (AHCI); 0139 SATA Controller (RAID)	libsmbios name + BIOS DA table
-0x0138	SATA Controller (AHCI)	true	0x0001	0x045A	0135 SATA Controller (OFF); 0137 SATA Controller (ATA); 0139 SATA Controller (RAID)	libsmbios name + BIOS DA table
-0x0139	SATA Controller (RAID)	false	0x0002	0x045A	0135 SATA Controller (OFF); 0137 SATA Controller (ATA); 0138 SATA Controller (AHCI)	libsmbios name + BIOS DA table
-0x0140	CPU XD Support (Off)		0x0000	0x0C70	0141 CPU XD Support (Enabled)	libsmbios name + BIOS DA table
-0x0141	CPU XD Support (Enabled)		0x0001	0x0C70	0140 CPU XD Support (Off)	libsmbios name + BIOS DA table
-0x0144	TPM Enable (Off)		0x0000	0x0442	0145 TPM Enable (Enabled)	libsmbios name + BIOS DA table
-0x0145	TPM Enable (Enabled)		0x0001	0x0442	0144 TPM Enable (Off)	libsmbios name + BIOS DA table
-0x0146	USB Wake Support (Off)		0x0000	0x0601	0147 USB Wake Support (Enabled)	libsmbios name + BIOS DA table
-0x0147	USB Wake Support (Enabled)		0x0001	0x0601	0146 USB Wake Support (Off)	libsmbios name + BIOS DA table
-0x014A	CPU Virtualization (Disabled)		0x0000	0x0437	014B CPU Virtualization (Enabled)	libsmbios name + BIOS DA table
-0x014B	CPU Virtualization (Enabled)		0x0001	0x0437	014A CPU Virtualization (Disabled)	libsmbios name + BIOS DA table
-0x014E	Front USB Ports (Disabled)		0x0000	0x0658	014F Front USB Ports (Enabled)	libsmbios name + BIOS DA table
-0x014F	Front USB Ports (Enabled)		0x0001	0x0658	014E Front USB Ports (Disabled)	libsmbios name + BIOS DA table
-0x0154	SERR DMI Message (Off)		0x0000	0x060F	0155 SERR DMI Message (On)	libsmbios name + BIOS DA table
-0x0155	SERR DMI Message (On)		0x0001	0x060F	0154 SERR DMI Message (Off)	libsmbios name + BIOS DA table
-0x0168	Limit CPUID Value (Off)		0x0000	0x0C72	0169 Limit CPUID Value (On)	libsmbios name + BIOS DA table
-0x0169	Limit CPUID Value (On)		0x0001	0x0C72	0168 Limit CPUID Value (Off)	libsmbios name + BIOS DA table
-0x0171	Adjacent Cache Line Prefetch (Disabled)		0x0000	0x0475	0172 Adjacent Cache Line Prefetch (Enabled)	libsmbios name + BIOS DA table
-0x0172	Adjacent Cache Line Prefetch (Enabled)		0x0001	0x0475	0171 Adjacent Cache Line Prefetch (Disabled)	libsmbios name + BIOS DA table
-0x0173	Hardware Prefetcher (Disabled)		0x0000	0x0474	0174 Hardware Prefetcher (Enabled)	libsmbios name + BIOS DA table
-0x0174	Hardware Prefetcher (Enabled)		0x0001	0x0474	0173 Hardware Prefetcher (Disabled)	libsmbios name + BIOS DA table
-0x019B	Password Bypass (Off)		0x0000	0x0643	019C Password Bypass (Reboot Bypass)	libsmbios name + BIOS DA table
-0x019C	Password Bypass (Reboot Bypass)		0x0001	0x0643	019B Password Bypass (Off)	libsmbios name + BIOS DA table
-0x01C4	Node Interleave (Disabled)		0x0000	0x0665	01C5 Node Interleave (Enabled)	libsmbios name + BIOS DA table
-0x01C5	Node Interleave (Enabled)		0x0001	0x0665	01C4 Node Interleave (Disabled)	libsmbios name + BIOS DA table
-0x01E8	MEBx Hotkey (Off)		0x0000	0x0451	01E9 MEBx Hotkey (On)	libsmbios name + BIOS DA table
-0x01E9	MEBx Hotkey (On)		0x0001	0x0451	01E8 MEBx Hotkey (Off)	libsmbios name + BIOS DA table
-0x01EA	Core-Based Turbo Mode (Off)		0x0000	0x0C7C	01EB Core-Based Turbo Mode (Enabled)	libsmbios name + BIOS DA table
-0x01EB	Core-Based Turbo Mode (Enabled)		0x0001	0x0C7C	01EA Core-Based Turbo Mode (Off)	libsmbios name + BIOS DA table
-0x0202	Trusted Execution (Off)	true	0x0000	0x0471	0203 Trusted Execution (On)	libsmbios name + BIOS DA table
-0x0203	Trusted Execution (On)	false	0x0001	0x0471	0202 Trusted Execution (Off)	libsmbios name + BIOS DA table
-0x0204	VT for Direct I/O (Off)	false	0x0000	0x0472	0205 VT for Direct I/O (On)	libsmbios name + BIOS DA table
-0x0205	VT for Direct I/O (On)	true	0x0001	0x0472	0204 VT for Direct I/O (Off)	libsmbios name + BIOS DA table
-0x022D	Boot Mode (UEFI)	true	0x0001	0x048B	022E Boot Mode (BIOS)	libsmbios name + BIOS DA table
-0x022E	Boot Mode (BIOS)	false	0x0000	0x048B	022D Boot Mode (UEFI)	libsmbios name + BIOS DA table
-0x0231	NUMBER OF CORES PER PROCESSOR (4 Cores)	false	0x0004	0x0435	026E Number of Cores per Processor (All); 0233 NUMBER OF CORES PER PROCESSOR (1 Core); 0232 NUMBER OF CORES PER PROCESSOR (2 Cores); 03BE Processor Core Count (Value)	libsmbios name + BIOS DA table
-0x0232	NUMBER OF CORES PER PROCESSOR (2 Cores)	false	0x0002	0x0435	026E Number of Cores per Processor (All); 0233 NUMBER OF CORES PER PROCESSOR (1 Core); 0231 NUMBER OF CORES PER PROCESSOR (4 Cores); 03BE Processor Core Count (Value)	libsmbios name + BIOS DA table
-0x0233	NUMBER OF CORES PER PROCESSOR (1 Core)	false	0x0001	0x0435	026E Number of Cores per Processor (All); 0232 NUMBER OF CORES PER PROCESSOR (2 Cores); 0231 NUMBER OF CORES PER PROCESSOR (4 Cores); 03BE Processor Core Count (Value)	libsmbios name + BIOS DA table
-0x024A	Trusted Platform Module (Activate)	false	0x0001	0x04C0	800C Trusted Platform Module (Deactivated)	libsmbios name + BIOS DA table
-0x024B	C States Control (Enabled)	true	0x0001	0x0C76	024C C States Control (Disabled)	libsmbios name + BIOS DA table
-0x024C	C States Control (Disabled)	false	0x0000	0x0C76	024B C States Control (Enabled)	libsmbios name + BIOS DA table
-0x0264	Password Length Restriction (ON)	false	0x0001	0x04D2	0265 Password Length Restriction (OFF)	libsmbios name + BIOS DA table
-0x0265	Password Length Restriction (OFF)	true	0x0000	0x04D2	0264 Password Length Restriction (ON)	libsmbios name + BIOS DA table
-0x0266	Boot Menu Restriction (ON)	false	0x0001	0x04D3	0267 Boot Menu Restriction (OFF)	libsmbios name + BIOS DA table
-0x0267	Boot Menu Restriction (OFF)	true	0x0000	0x04D3	0266 Boot Menu Restriction (ON)	libsmbios name + BIOS DA table
-0x0268	Flash Restriction (ON)	false	0x0001	0x04D5	0269 Flash Restriction (OFF)	libsmbios name + BIOS DA table
-0x0269	Flash Restriction (OFF)	true	0x0000	0x04D5	0268 Flash Restriction (ON)	libsmbios name + BIOS DA table
-0x026C	Alt System Name (ON)	false	0x0001	0x04D6	026D Alt System Name (OFF)	libsmbios name + BIOS DA table
-0x026D	Alt System Name (OFF)	true	0x0000	0x04D6	026C Alt System Name (ON)	libsmbios name + BIOS DA table
-0x026E	Number of Cores per Processor (All)	true	0x0000	0x0435	0233 NUMBER OF CORES PER PROCESSOR (1 Core); 0232 NUMBER OF CORES PER PROCESSOR (2 Cores); 0231 NUMBER OF CORES PER PROCESSOR (4 Cores); 03BE Processor Core Count (Value)	libsmbios name + BIOS DA table
-0x0275	Internal USB Port 1 (Disabled)	false	0x0000	0x0671	0276 Internal USB Port 1 (Enabled)	libsmbios name + BIOS DA table
-0x0276	Internal USB Port 1 (Enabled)	true	0x0001	0x0671	0275 Internal USB Port 1 (Disabled)	libsmbios name + BIOS DA table
-0x02A3	USB 3.0 (Enabled)	true	0x0001	0x0668	02A4 USB 3.0 (Disabled)	libsmbios name + BIOS DA table
-0x02A4	USB 3.0 (Disabled)	false	0x0000	0x0668	02A3 USB 3.0 (Enabled)	libsmbios name + BIOS DA table
-0x02A7	Strong Password (Enabled)	false	0x0001	0x0653	02A8 Strong Password (Disabled)	libsmbios name + BIOS DA table
-0x02A8	Strong Password (Disabled)	true	0x0000	0x0653	02A7 Strong Password (Enabled)	libsmbios name + BIOS DA table
-0x02BD	Admin Setup Lockout (Enabled)	false	0x0001	0x0652	02BE Admin Setup Lockout (Disabled)	libsmbios name + BIOS DA table
-0x02BE	Admin Setup Lockout (Disabled)	true	0x0000	0x0652	02BD Admin Setup Lockout (Enabled)	libsmbios name + BIOS DA table
-0x02CD	Clear GPE Ownership (Clear GPE Ownership)	false	0x0001	0x044C		libsmbios name + BIOS DA table
-0x02D8	AdminPwdMaxLen (Variable)	false	0xFFFF	0x0655	02DA AdminStrongPwdMaxLen (Variable)	libsmbios name + BIOS DA table
-0x02D9	AdminPwdMinLen (Variable)	false	0xFFFF	0x0654	02DB AdminStrongPwdMinLen (Variable)	libsmbios name + BIOS DA table
-0x02DA	AdminStrongPwdMaxLen (Variable)	false	0xFFFF	0x0655	02D8 AdminPwdMaxLen (Variable)	libsmbios name + BIOS DA table
-0x02DB	AdminStrongPwdMinLen (Variable)	false	0xFFFF	0x0654	02D9 AdminPwdMinLen (Variable)	libsmbios name + BIOS DA table
-0x02DC	SystemPwdMaxLen (Variable)	false	0xFFFF	0x0657	02DE SystemStrongPwdMaxLen (Variable)	libsmbios name + BIOS DA table
-0x02DD	SystemPwdMinLen (Variable)	false	0xFFFF	0x0656	02DF SystemStrongPwdMinLen (Variable)	libsmbios name + BIOS DA table
-0x02DE	SystemStrongPwdMaxLen (Variable)	false	0xFFFF	0x0657	02DC SystemPwdMaxLen (Variable)	libsmbios name + BIOS DA table
-0x02DF	SystemStrongPwdMinLen (Variable)	false	0xFFFF	0x0656	02DD SystemPwdMinLen (Variable)	libsmbios name + BIOS DA table
-0x02E4	BlockS3 (Disable)	false	0x0000	0x047C	02E5 BlockS3 (Enable)	libsmbios name + BIOS DA table
-0x02E5	BlockS3 (Enable)	true	0x0001	0x047C	02E4 BlockS3 (Disable)	libsmbios name + BIOS DA table
-0x02FD	Fan Control Override (Enable)	false	0x0001	0x0429	02FE Fan Control Override (Disable)	libsmbios name + BIOS DA table
-0x02FE	Fan Control Override (Disable)	true	0x0000	0x0429	02FD Fan Control Override (Enable)	libsmbios name + BIOS DA table
-0x030F	Low Power Mode (S5Only)	false	0x0002	0x042A	00F5 Low Power Mode (Enabled); 00F6 Low Power Mode (Disabled)	libsmbios name + BIOS DA table
-0x0312	Auto-on (DayControl)	false	0x0003	0x0411	0028 Auto-on (Disable); 0029 Auto-on (Every Day); 002A Auto-on (Weekdays)	libsmbios name + BIOS DA table
-0x0313	Auto-on Sunday (Enable)	false	0x0001	0x04E1	0314 Auto-on Sunday (Disable)	libsmbios name + BIOS DA table
-0x0314	Auto-on Sunday (Disable)	true	0x0000	0x04E1	0313 Auto-on Sunday (Enable)	libsmbios name + BIOS DA table
-0x0315	Auto-on Monday (Enable)	false	0x0001	0x04E2	0316 Auto-on Monday (Disable)	libsmbios name + BIOS DA table
-0x0316	Auto-on Monday (Disable)	true	0x0000	0x04E2	0315 Auto-on Monday (Enable)	libsmbios name + BIOS DA table
-0x0317	Auto-on Tuesday (Enable)	false	0x0001	0x04E3	0318 Auto-on Tuesday (Disable)	libsmbios name + BIOS DA table
-0x0318	Auto-on Tuesday (Disable)	true	0x0000	0x04E3	0317 Auto-on Tuesday (Enable)	libsmbios name + BIOS DA table
-0x0319	Auto-on Wednesday (Enable)	false	0x0001	0x04E4	031A Auto-on Wednesday (Disable)	libsmbios name + BIOS DA table
-0x031A	Auto-on Wednesday (Disable)	true	0x0000	0x04E4	0319 Auto-on Wednesday (Enable)	libsmbios name + BIOS DA table
-0x031B	Auto-on Thursday (Enable)	false	0x0001	0x04E5	031C Auto-on Thursday (Disable)	libsmbios name + BIOS DA table
-0x031C	Auto-on Thursday (Disable)	true	0x0000	0x04E5	031B Auto-on Thursday (Enable)	libsmbios name + BIOS DA table
-0x031D	Auto-on Friday (Enable)	false	0x0001	0x04E6	031E Auto-on Friday (Disable)	libsmbios name + BIOS DA table
-0x031E	Auto-on Friday (Disable)	true	0x0000	0x04E6	031D Auto-on Friday (Enable)	libsmbios name + BIOS DA table
-0x031F	Auto-on Saturday (Enable)	false	0x0001	0x04E7	0320 Auto-on Saturday (Disable)	libsmbios name + BIOS DA table
-0x0320	Auto-on Saturday (Disable)	true	0x0000	0x04E7	031F Auto-on Saturday (Enable)	libsmbios name + BIOS DA table
-0x032D	Fault-Tolerant Memory (Enable)	true	0x0001	0x0669	032E Fault-Tolerant Memory (Disable)	libsmbios name + BIOS DA table
-0x032E	Fault-Tolerant Memory (Disable)	false	0x0000	0x0669	032D Fault-Tolerant Memory (Enable)	libsmbios name + BIOS DA table
-0x0332	Fan Speed (Auto)		0x0000	0x0427	0335 Fan Speed (Low)	libsmbios name + BIOS DA table
-0x0335	Fan Speed (Low)		0x0002	0x0427	0332 Fan Speed (Auto)	libsmbios name + BIOS DA table
-0x0338	Dynamic Backlight Control (Enable)	false	0x0001	0x042D	0339 Dynamic Backlight Control (Disable)	libsmbios name + BIOS DA table
-0x0339	Dynamic Backlight Control (Disable)	false	0x0001	0x042D	0338 Dynamic Backlight Control (Enable)	libsmbios name + BIOS DA table
-0x034F	Secure Boot (Enable)	false	0x0001	0x041B		libsmbios name + BIOS DA table
-0x0351	HDD1 Fan Enable (Disable)	true	0x0000	0x040C	0352 HDD1 Fan Enable (Enable)	libsmbios name + BIOS DA table
-0x0352	HDD1 Fan Enable (Enable)	false	0x0001	0x040C	0351 HDD1 Fan Enable (Disable)	libsmbios name + BIOS DA table
-0x0357	Enable Legacy Option ROMs (Disabled)	false	0x0000	0x041C	0358 Enable Legacy Option ROMs (Enabled)	libsmbios name + BIOS DA table
-0x0358	Enable Legacy Option ROMs (Enabled)	true	0x0001	0x041C	0357 Enable Legacy Option ROMs (Disabled)	libsmbios name + BIOS DA table
-0x0361	UEFI Network Stack (Enable)	false	0x0001	0x040F	0362 UEFI Network Stack (Disable); 0362 UEFI Network Stack (Disable)	libsmbios name + BIOS DA table
-0x0362	UEFI Network Stack (Disable)	true	0x0000	0x040F	0361 UEFI Network Stack (Enable); 0361 UEFI Network Stack (Enable)	libsmbios name + BIOS DA table
-0x0369	OROM Keyboard Access (Disable)	false	0x0000	0x0661	036A OROM Keyboard Access (Enable); 036B OROM Keyboard Access (Onetime Enable)	libsmbios name + BIOS DA table
-0x036A	OROM Keyboard Access (Enable)	true	0x0001	0x0661	0369 OROM Keyboard Access (Disable); 036B OROM Keyboard Access (Onetime Enable)	libsmbios name + BIOS DA table
-0x036B	OROM Keyboard Access (Onetime Enable)	false	0x0002	0x0661	036A OROM Keyboard Access (Enable); 0369 OROM Keyboard Access (Disable)	libsmbios name + BIOS DA table
-0x036F	Primary Video Device Slot (Value)	false	0xFFFF	0x0E1E		libsmbios name + BIOS DA table
-0x0381	MmioAbove4Gb (Disable)	false	0x0000	0x0E1F	0382 MmioAbove4Gb (Enable)	libsmbios name + BIOS DA table
-0x0382	MmioAbove4Gb (Enable)	true	0x0001	0x0E1F	0381 MmioAbove4Gb (Disable)	libsmbios name + BIOS DA table
-0x0383	Wake On Lan (LAN with PXE Boot)	false	0x0007	0x0478	0055 Wake-on-LAN (Disabled); 006D Wake-on-LAN (Enabled)	libsmbios name + BIOS DA table
-0x0384	Pci Mmio Size (Small)	true	0x0000	0x06A8	0385 Pci Mmio Size (Large); 0421 PCI MMIO Size (Value)	libsmbios name + BIOS DA table
-0x0385	Pci Mmio Size (Large)	false	0x0001	0x06A8	0384 Pci Mmio Size (Small); 0421 PCI MMIO Size (Value)	libsmbios name + BIOS DA table
-0x038A	Dell Wyse P25 Bios Access (On)	true	0x0001	0x066B	038B Dell Wyse P25 Bios Access (Off)	libsmbios name + BIOS DA table
-0x038B	Dell Wyse P25 Bios Access (Off)	false	0x0000	0x066B	038A Dell Wyse P25 Bios Access (On)	libsmbios name + BIOS DA table
-0x03A2	Thunderbolt (Enabled)	false	0x0001	0x06A9	03A3 Thunderbolt (Disabled)	libsmbios name + BIOS DA table
-0x03A3	Thunderbolt (Disabled)	true	0x0000	0x06A9	03A2 Thunderbolt (Enabled)	libsmbios name + BIOS DA table
-0x03BE	Processor Core Count (Value)	false	0xFFFF	0x0435	026E Number of Cores per Processor (All); 0233 NUMBER OF CORES PER PROCESSOR (1 Core); 0232 NUMBER OF CORES PER PROCESSOR (2 Cores); 0231 NUMBER OF CORES PER PROCESSOR (4 Cores)	libsmbios name + BIOS DA table
-0x03C1	Thunderbolt Security Level (UserAuthorization)	true	0x0001	0x06AA	03C5 Thunderbolt Security Level (NoSecurity); 03C2 Thunderbolt Security Level (SecureConnect); 03C3 Thunderbolt Security Level (DisplayPortOnly)	libsmbios name + BIOS DA table
-0x03C2	Thunderbolt Security Level (SecureConnect)	false	0x0002	0x06AA	03C5 Thunderbolt Security Level (NoSecurity); 03C1 Thunderbolt Security Level (UserAuthorization); 03C3 Thunderbolt Security Level (DisplayPortOnly)	libsmbios name + BIOS DA table
-0x03C3	Thunderbolt Security Level (DisplayPortOnly)	false	0x0003	0x06AA	03C5 Thunderbolt Security Level (NoSecurity); 03C1 Thunderbolt Security Level (UserAuthorization); 03C2 Thunderbolt Security Level (SecureConnect)	libsmbios name + BIOS DA table
-0x03C4	Auto Fan Speed Intensity (Value)	false	0xFFFF	0x0E21		libsmbios name + BIOS DA table
-0x03C5	Thunderbolt Security Level (NoSecurity)	false	0x0000	0x06AA	03C1 Thunderbolt Security Level (UserAuthorization); 03C2 Thunderbolt Security Level (SecureConnect); 03C3 Thunderbolt Security Level (DisplayPortOnly)	libsmbios name + BIOS DA table
-0x03CF	Liquid Cooler 1 (Enabled)	false	0x0001	0x0559	03D0 Liquid Cooler 1 (Disabled)	libsmbios name + BIOS DA table
-0x03D0	Liquid Cooler 1 (Disabled)	true	0x0000	0x0559	03CF Liquid Cooler 1 (Enabled)	libsmbios name + BIOS DA table
-0x03D1	Liquid Cooler 2 (Enabled)	false	0x0001	0x055A	03D2 Liquid Cooler 2 (Disabled)	libsmbios name + BIOS DA table
-0x03D2	Liquid Cooler 2 (Disabled)	true	0x0000	0x055A	03D1 Liquid Cooler 2 (Enabled)	libsmbios name + BIOS DA table
-0x041A	Rear USB Ports (Enable)	true	0x0001	0x06A7	041B Rear USB Ports (Disable)	libsmbios name + BIOS DA table
-0x041B	Rear USB Ports (Disable)	false	0x0000	0x06A7	041A Rear USB Ports (Enable)	libsmbios name + BIOS DA table
-0x0421	PCI MMIO Size (Value)	false	0x0002	0x06A8	0384 Pci Mmio Size (Small); 0385 Pci Mmio Size (Large)	libsmbios name + BIOS DA table
-0x0428	Active State Power Management (Auto)	false	0x0004	0x0E37	0429 Active State Power Management (Disable); 042A Active State Power Management (L1)	libsmbios name + BIOS DA table
-0x0429	Active State Power Management (Disable)	true	0x0000	0x0E37	0428 Active State Power Management (Auto); 042A Active State Power Management (L1)	libsmbios name + BIOS DA table
-0x042A	Active State Power Management (L1)	false	0x0002	0x0E37	0428 Active State Power Management (Auto); 0429 Active State Power Management (Disable)	libsmbios name + BIOS DA table
-0x042B	TPM Hash Algorithm (Value)	false	0xFFFF	0x055F		libsmbios name + BIOS DA table
-0x042C	CPU Snoop Mode (Early)	false	0x0001	0x06C7	042D CPU Snoop Mode (Home); 045D CPU Snoop Mode (Opportunistic); 0430 CPU Snoop Mode (ClusterOnDie)	libsmbios name + BIOS DA table
-0x042D	CPU Snoop Mode (Home)	false	0x0000	0x06C7	042C CPU Snoop Mode (Early); 045D CPU Snoop Mode (Opportunistic); 0430 CPU Snoop Mode (ClusterOnDie)	libsmbios name + BIOS DA table
-0x042E	System Isochronous Mode (Enabled)	false	0x0001	0x06C8	042F System Isochronous Mode (Disabled)	libsmbios name + BIOS DA table
-0x042F	System Isochronous Mode (Disabled)	true	0x0000	0x06C8	042E System Isochronous Mode (Enabled)	libsmbios name + BIOS DA table
-0x0430	CPU Snoop Mode (ClusterOnDie)	false	0x0003	0x06C7	042C CPU Snoop Mode (Early); 042D CPU Snoop Mode (Home); 045D CPU Snoop Mode (Opportunistic)	libsmbios name + BIOS DA table
-0x045D	CPU Snoop Mode (Opportunistic)	false	0x0002	0x06C7	042C CPU Snoop Mode (Early); 042D CPU Snoop Mode (Home); 0430 CPU Snoop Mode (ClusterOnDie)	libsmbios name + BIOS DA table
-0x0487	Master Password Lockout (Enabled)	true	0x0001	0x0733	0488 unknown (unknown)	NVRAM diff on archy: activating it set Setup 0x02D6 ("Enable Master Password Lockout") 0 -> 1
-0x0488	Master Password Lockout (Disabled)	false	0x0000	0x0733	0487 unknown (unknown)	pair of 0x0487 (value 0, same setting); the firmware refuses it from the OS (activate leaves it false)
-0x0498	unknown (unknown)	false	0xFFFF	0x06DA		BIOS table only; not activated (no token restores the current value)
-0x04A7	unknown (unknown)	false	0x0003	0x0E38	04A9 unknown (unknown); 04A8 unknown (unknown)	BIOS table only; not activated (no token restores the current value)
-0x04A8	unknown (unknown)	false	0x0001	0x0E38	04A7 unknown (unknown); 04A9 unknown (unknown)	BIOS table only; not activated (no token restores the current value)
-0x04A9	unknown (unknown)	false	0x0002	0x0E38	04A7 unknown (unknown); 04A8 unknown (unknown)	BIOS table only; not activated (no token restores the current value)
-0x8000	Chassis Intrusion (Tripped)	true	0x0000	0x048E	8002 Chassis Intrusion (Door Open); 8003 Chassis Intrusion (Door Closed)	libsmbios name + BIOS DA table
-0x8002	Chassis Intrusion (Door Open)	false	0x0002	0x048E	8000 Chassis Intrusion (Tripped); 8003 Chassis Intrusion (Door Closed)	libsmbios name + BIOS DA table
-0x8003	Chassis Intrusion (Door Closed)	false	0x0003	0x048E	8000 Chassis Intrusion (Tripped); 8002 Chassis Intrusion (Door Open)	libsmbios name + BIOS DA table
-0x800C	Trusted Platform Module (Deactivated)	true	0x0000	0x04C0	024A Trusted Platform Module (Activate)	libsmbios name + BIOS DA table
-0x800E	Trusted Platform Module (Owned)	false	0x0001	0x955D		libsmbios name + BIOS DA table
-0xA000	Chassis Intrusion (Trip Reset)		0x0001	0x048F		libsmbios name + BIOS DA table
-0xF100	unknown (code-handled token family; setting 0x0E1C is shared by every 0xF1xx/0xF6xx token)	false	0x0001	0x0E1C	F102 unknown (unknown); F103 unknown (unknown); F105 unknown (unknown); F120 unknown (unknown); F122 unknown (unknown); F123 unknown (unknown); F125 unknown (unknown); F130 unknown (unknown); F132 unknown (unknown); F133 unknown (unknown); F135 unknown (unknown); F600 unknown (unknown); F601 unknown (unknown); F602 unknown (unknown); F604 unknown (unknown)	BIOS table only; not activated (a code-handled token can be an action)
-0xF102	unknown (code-handled token family; setting 0x0E1C is shared by every 0xF1xx/0xF6xx token)	false	0x0001	0x0E1C	F100 unknown (unknown); F103 unknown (unknown); F105 unknown (unknown); F120 unknown (unknown); F122 unknown (unknown); F123 unknown (unknown); F125 unknown (unknown); F130 unknown (unknown); F132 unknown (unknown); F133 unknown (unknown); F135 unknown (unknown); F600 unknown (unknown); F601 unknown (unknown); F602 unknown (unknown); F604 unknown (unknown)	BIOS table only; not activated (a code-handled token can be an action)
-0xF103	unknown (code-handled token family; setting 0x0E1C is shared by every 0xF1xx/0xF6xx token)	false	0x0001	0x0E1C	F100 unknown (unknown); F102 unknown (unknown); F105 unknown (unknown); F120 unknown (unknown); F122 unknown (unknown); F123 unknown (unknown); F125 unknown (unknown); F130 unknown (unknown); F132 unknown (unknown); F133 unknown (unknown); F135 unknown (unknown); F600 unknown (unknown); F601 unknown (unknown); F602 unknown (unknown); F604 unknown (unknown)	BIOS table only; not activated (a code-handled token can be an action)
-0xF105	unknown (code-handled token family; setting 0x0E1C is shared by every 0xF1xx/0xF6xx token)	false	0x0001	0x0E1C	F100 unknown (unknown); F102 unknown (unknown); F103 unknown (unknown); F120 unknown (unknown); F122 unknown (unknown); F123 unknown (unknown); F125 unknown (unknown); F130 unknown (unknown); F132 unknown (unknown); F133 unknown (unknown); F135 unknown (unknown); F600 unknown (unknown); F601 unknown (unknown); F602 unknown (unknown); F604 unknown (unknown)	BIOS table only; not activated (a code-handled token can be an action)
-0xF120	unknown (code-handled token family; setting 0x0E1C is shared by every 0xF1xx/0xF6xx token)	false	0x0001	0x0E1C	F100 unknown (unknown); F102 unknown (unknown); F103 unknown (unknown); F105 unknown (unknown); F122 unknown (unknown); F123 unknown (unknown); F125 unknown (unknown); F130 unknown (unknown); F132 unknown (unknown); F133 unknown (unknown); F135 unknown (unknown); F600 unknown (unknown); F601 unknown (unknown); F602 unknown (unknown); F604 unknown (unknown)	BIOS table only; not activated (a code-handled token can be an action)
-0xF122	unknown (code-handled token family; setting 0x0E1C is shared by every 0xF1xx/0xF6xx token)	false	0x0001	0x0E1C	F100 unknown (unknown); F102 unknown (unknown); F103 unknown (unknown); F105 unknown (unknown); F120 unknown (unknown); F123 unknown (unknown); F125 unknown (unknown); F130 unknown (unknown); F132 unknown (unknown); F133 unknown (unknown); F135 unknown (unknown); F600 unknown (unknown); F601 unknown (unknown); F602 unknown (unknown); F604 unknown (unknown)	BIOS table only; not activated (a code-handled token can be an action)
-0xF123	unknown (code-handled token family; setting 0x0E1C is shared by every 0xF1xx/0xF6xx token)	false	0x0001	0x0E1C	F100 unknown (unknown); F102 unknown (unknown); F103 unknown (unknown); F105 unknown (unknown); F120 unknown (unknown); F122 unknown (unknown); F125 unknown (unknown); F130 unknown (unknown); F132 unknown (unknown); F133 unknown (unknown); F135 unknown (unknown); F600 unknown (unknown); F601 unknown (unknown); F602 unknown (unknown); F604 unknown (unknown)	BIOS table only; not activated (a code-handled token can be an action)
-0xF125	unknown (code-handled token family; setting 0x0E1C is shared by every 0xF1xx/0xF6xx token)	false	0x0001	0x0E1C	F100 unknown (unknown); F102 unknown (unknown); F103 unknown (unknown); F105 unknown (unknown); F120 unknown (unknown); F122 unknown (unknown); F123 unknown (unknown); F130 unknown (unknown); F132 unknown (unknown); F133 unknown (unknown); F135 unknown (unknown); F600 unknown (unknown); F601 unknown (unknown); F602 unknown (unknown); F604 unknown (unknown)	BIOS table only; not activated (a code-handled token can be an action)
-0xF130	unknown (code-handled token family; setting 0x0E1C is shared by every 0xF1xx/0xF6xx token)	false	0x0001	0x0E1C	F100 unknown (unknown); F102 unknown (unknown); F103 unknown (unknown); F105 unknown (unknown); F120 unknown (unknown); F122 unknown (unknown); F123 unknown (unknown); F125 unknown (unknown); F132 unknown (unknown); F133 unknown (unknown); F135 unknown (unknown); F600 unknown (unknown); F601 unknown (unknown); F602 unknown (unknown); F604 unknown (unknown)	BIOS table only; not activated (a code-handled token can be an action)
-0xF132	unknown (code-handled token family; setting 0x0E1C is shared by every 0xF1xx/0xF6xx token)	false	0x0001	0x0E1C	F100 unknown (unknown); F102 unknown (unknown); F103 unknown (unknown); F105 unknown (unknown); F120 unknown (unknown); F122 unknown (unknown); F123 unknown (unknown); F125 unknown (unknown); F130 unknown (unknown); F133 unknown (unknown); F135 unknown (unknown); F600 unknown (unknown); F601 unknown (unknown); F602 unknown (unknown); F604 unknown (unknown)	BIOS table only; not activated (a code-handled token can be an action)
-0xF133	unknown (code-handled token family; setting 0x0E1C is shared by every 0xF1xx/0xF6xx token)	false	0x0001	0x0E1C	F100 unknown (unknown); F102 unknown (unknown); F103 unknown (unknown); F105 unknown (unknown); F120 unknown (unknown); F122 unknown (unknown); F123 unknown (unknown); F125 unknown (unknown); F130 unknown (unknown); F132 unknown (unknown); F135 unknown (unknown); F600 unknown (unknown); F601 unknown (unknown); F602 unknown (unknown); F604 unknown (unknown)	BIOS table only; not activated (a code-handled token can be an action)
-0xF135	unknown (code-handled token family; setting 0x0E1C is shared by every 0xF1xx/0xF6xx token)	false	0x0001	0x0E1C	F100 unknown (unknown); F102 unknown (unknown); F103 unknown (unknown); F105 unknown (unknown); F120 unknown (unknown); F122 unknown (unknown); F123 unknown (unknown); F125 unknown (unknown); F130 unknown (unknown); F132 unknown (unknown); F133 unknown (unknown); F600 unknown (unknown); F601 unknown (unknown); F602 unknown (unknown); F604 unknown (unknown)	BIOS table only; not activated (a code-handled token can be an action)
-0xF600	unknown (code-handled token family; setting 0x0E1C is shared by every 0xF1xx/0xF6xx token)	false	0x0001	0x0E1C	F100 unknown (unknown); F102 unknown (unknown); F103 unknown (unknown); F105 unknown (unknown); F120 unknown (unknown); F122 unknown (unknown); F123 unknown (unknown); F125 unknown (unknown); F130 unknown (unknown); F132 unknown (unknown); F133 unknown (unknown); F135 unknown (unknown); F601 unknown (unknown); F602 unknown (unknown); F604 unknown (unknown)	BIOS table only; not activated (a code-handled token can be an action)
-0xF601	unknown (code-handled token family; setting 0x0E1C is shared by every 0xF1xx/0xF6xx token)	false	0x0001	0x0E1C	F100 unknown (unknown); F102 unknown (unknown); F103 unknown (unknown); F105 unknown (unknown); F120 unknown (unknown); F122 unknown (unknown); F123 unknown (unknown); F125 unknown (unknown); F130 unknown (unknown); F132 unknown (unknown); F133 unknown (unknown); F135 unknown (unknown); F600 unknown (unknown); F602 unknown (unknown); F604 unknown (unknown)	BIOS table only; not activated (a code-handled token can be an action)
-0xF602	unknown (code-handled token family; setting 0x0E1C is shared by every 0xF1xx/0xF6xx token)	false	0x0001	0x0E1C	F100 unknown (unknown); F102 unknown (unknown); F103 unknown (unknown); F105 unknown (unknown); F120 unknown (unknown); F122 unknown (unknown); F123 unknown (unknown); F125 unknown (unknown); F130 unknown (unknown); F132 unknown (unknown); F133 unknown (unknown); F135 unknown (unknown); F600 unknown (unknown); F601 unknown (unknown); F604 unknown (unknown)	BIOS table only; not activated (a code-handled token can be an action)
-0xF604	unknown (code-handled token family; setting 0x0E1C is shared by every 0xF1xx/0xF6xx token)	false	0x0001	0x0E1C	F100 unknown (unknown); F102 unknown (unknown); F103 unknown (unknown); F105 unknown (unknown); F120 unknown (unknown); F122 unknown (unknown); F123 unknown (unknown); F125 unknown (unknown); F130 unknown (unknown); F132 unknown (unknown); F133 unknown (unknown); F135 unknown (unknown); F600 unknown (unknown); F601 unknown (unknown); F602 unknown (unknown)	BIOS table only; not activated (a code-handled token can be an action)
-token	name (libsmbios)	active on archy	value written	Dell setting ID	other tokens on that setting	libsmbios name + BIOS DA table
+token	name	active on archy	value written	Dell setting ID	Setup offset	Setup field (DellIntelMap)	setup prompt	archy's current Setup value	evidence
+0x0006	Serial Port 1 (COM4)	false	0x0005	0x0402	0x01F6	DellSerialPortMode	Serial Port	0 Disabled	libsmbios name + BIOS DA table
+0x000F	Serial Port 1 (Disable)	true	0x0000	0x0402	0x01F6	DellSerialPortMode	Serial Port	0 Disabled	libsmbios name + BIOS DA table
+0x0011	Serial Port 1 (COM1)	false	0x0002	0x0402	0x01F6	DellSerialPortMode	Serial Port	0 Disabled	libsmbios name + BIOS DA table
+0x0012	Serial Port 1 (COM3)	false	0x0004	0x0402	0x01F6	DellSerialPortMode	Serial Port	0 Disabled	libsmbios name + BIOS DA table
+0x0022	Sound Device (Enable)	true	0x0001	0x0A07	0x028C	PchAzalia	Enable Audio	1 Enabled	libsmbios name + BIOS DA table
+0x0023	Sound Device (Disable)	false	0x0000	0x0A07	0x028C	PchAzalia	Enable Audio	1 Enabled	libsmbios name + BIOS DA table
+0x0028	Auto-on (Disable)	true	0x0000	0x0411	0x0188	DellAutoOnEnable			libsmbios name + BIOS DA table
+0x0029	Auto-on (Every Day)	false	0x0001	0x0411	0x0188	DellAutoOnEnable			libsmbios name + BIOS DA table
+0x002A	Auto-on (Weekdays)	false	0x0002	0x0411	0x0188	DellAutoOnEnable			libsmbios name + BIOS DA table
+0x002B	Auto-on Hour (n/a)	false	0xFFFF	0x0476	0x018A	AutoOnTimeHours			libsmbios name + BIOS DA table
+0x002C	Auto-on Minute (n/a)	false	0xFFFF	0x0477	0x018B	AutoOnTimeMinutes			libsmbios name + BIOS DA table
+0x002D	Embedded NIC1 (Enable with PXE)	false	0x0002	0x0412	0x0236	DellNic			libsmbios name + BIOS DA table
+0x002E	Embedded NIC1 (Disable)	false	0x0000	0x0412	0x0236	DellNic			libsmbios name + BIOS DA table
+0x0042	Num Lock (Enable)	true	0x0001	0x0420	0x0000	Numlock	Bootup NumLock State	1 On	libsmbios name + BIOS DA table
+0x0043	Num Lock (Disable)	false	0x0000	0x0420	0x0000	Numlock	Bootup NumLock State	1 On	libsmbios name + BIOS DA table
+0x0055	Wake-on-LAN (Disabled)	false	0x0000	0x0478	0x018E	DellWakeOnLanWlan			libsmbios name + BIOS DA table
+0x005C	Remote BIOS Update (Enable)	false	0x0001	0x0458	0x0067	RemoteBiosUpdate		0 Disabled	libsmbios name + BIOS DA table
+0x005D	Remote BIOS Update (Disable)	true	0x0000	0x0458	0x0067	RemoteBiosUpdate		0 Disabled	libsmbios name + BIOS DA table
+0x006D	Wake-on-LAN (Enabled)	true	0x0005	0x0478	0x018E	DellWakeOnLanWlan			libsmbios name + BIOS DA table
+0x006E	Embedded NIC1 (Enable without Boot Support)	true	0x0001	0x0412	0x0236	DellNic			libsmbios name + BIOS DA table
+0x007D	LCD Brightness (Value)		0xFFFF	0x0079	0x00D4	BrightnessOnAc	Brightness On AC	15 	libsmbios name + BIOS DA table
+0x0087	Boot-time Video (Onboard)	false	0x0000	0x0470					libsmbios name + BIOS DA table
+0x0088	Boot-time Video (Add-in)	true	0x0001	0x0470					libsmbios name + BIOS DA table
+0x0090	Chassis Intrusion Reporting (Enabled)	false	0x0001	0x0486	0x01EB	DellChassisIntrusion			libsmbios name + BIOS DA table
+0x0091	Chassis Intrusion Reporting (Disabled)	false	0x0000	0x0486	0x01EB	DellChassisIntrusion			libsmbios name + BIOS DA table
+0x0092	Chassis Intrusion Reporting (Enabled, Silent)	true	0x0002	0x0486	0x01EB	DellChassisIntrusion			libsmbios name + BIOS DA table
+0x0093	Force PXE on Next Boot (Enabled)	false	0x0001	0x0459					libsmbios name + BIOS DA table
+0x0094	Force PXE on Next Boot (Disabled)	true	0x0000	0x0459					libsmbios name + BIOS DA table
+0x0097	PCI Slots (Enabled)	false	0x0001	0x040A	0x0204	DellPCISlotEn	Enable PCI Slot	0 Disabled	libsmbios name + BIOS DA table
+0x0098	PCI Slots (Disabled)	true	0x0000	0x040A	0x0204	DellPCISlotEn	Enable PCI Slot	0 Disabled	libsmbios name + BIOS DA table
+0x009B	USB Emulation, USB Boot Capable (Enabled)	true	0x0001	0x0430	0x0208	DellUsbController	Enable Boot Support	1 Enabled	libsmbios name + BIOS DA table
+0x009C	USB Emulation (Disabled)	false	0x0000	0x0430	0x0208	DellUsbController	Enable Boot Support	1 Enabled	libsmbios name + BIOS DA table
+0x009D	Keyboard Error Reporting (Enabled)	false	0x0001	0x0436	0x0250	DellKbdErrors	Enable Keyboard Error Detection	0 Disabled	libsmbios name + BIOS DA table
+0x009E	Keyboard Error Reporting (Disabled)	true	0x0000	0x0436	0x0250	DellKbdErrors	Enable Keyboard Error Detection	0 Disabled	libsmbios name + BIOS DA table
+0x009F	Password Status Lock (Locked)	false	0x0000	0x0644	0x01E4	DellPwdChange			libsmbios name + BIOS DA table
+0x00A0	Password Status Lock (Unlocked)	true	0x0001	0x0644	0x01E4	DellPwdChange			libsmbios name + BIOS DA table
+0x00A1	AC Power Recovery Mode (Off)	false	0x0000	0x0445	0x0186	DellAcRecovery			libsmbios name + BIOS DA table
+0x00A2	AC Power Recovery Mode (Last)	false	0x0002	0x0445	0x0186	DellAcRecovery			libsmbios name + BIOS DA table
+0x00A3	AC Power Recovery Mode (On)	true	0x0001	0x0445	0x0186	DellAcRecovery			libsmbios name + BIOS DA table
+0x00D1	CPU HyperThreading (Enabled)	true	0x0001	0x0473	0x0282	HTD	Hyper-Threading	1 Enabled	libsmbios name + BIOS DA table
+0x00D2	CPU HyperThreading (Disabled)	false	0x0000	0x0473	0x0282	HTD	Hyper-Threading	1 Enabled	libsmbios name + BIOS DA table
+0x00E4	F12 Post Display (Enabled)	false	0x0001	0x043E	0x0252	DellF12BootOption	Enable F12 Boot Option Menu	0 Disabled	libsmbios name + BIOS DA table
+0x00E5	F12 Post Display (Disabled)	true	0x0000	0x043E	0x0252	DellF12BootOption	Enable F12 Boot Option Menu	0 Disabled	libsmbios name + BIOS DA table
+0x00EA	POST Boot Testing (Minimal)	true	0x0000	0x0450	0x023E	DellFastBoot			libsmbios name + BIOS DA table
+0x00EB	POST Boot Testing (Thorough)	false	0x0001	0x0450	0x023E	DellFastBoot			libsmbios name + BIOS DA table
+0x00EC	POST Boot Testing (Automatic)	false	0x0002	0x0450	0x023E	DellFastBoot			libsmbios name + BIOS DA table
+0x00ED	SpeedStep (Disabled)	false	0x0000	0x0C74	0x0177	EnableGv			libsmbios name + BIOS DA table
+0x00F0	SpeedStep (Automatic)	true	0x0001	0x0C74	0x0177	EnableGv			libsmbios name + BIOS DA table
+0x00F5	Low Power Mode (Enabled)	false	0x0004	0x042A	0x027C	DeepSxMode	Deep Sleep	0 Disabled	libsmbios name + BIOS DA table
+0x00F6	Low Power Mode (Disabled)	true	0x0000	0x042A	0x027C	DeepSxMode	Deep Sleep	0 Disabled	libsmbios name + BIOS DA table
+0x0117	Serial ATA Drive 0 (OFF)	false	0x0000	0x0460	0x021F	DellSataEnable0	HDD-0	1 Enabled	libsmbios name + BIOS DA table
+0x0118	Serial ATA Drive 0 (AUTO)	true	0x0001	0x0460	0x021F	DellSataEnable0	HDD-0	1 Enabled	libsmbios name + BIOS DA table
+0x0119	Serial ATA Drive 1 (OFF)	false	0x0000	0x0461	0x0220	DellSataEnable1	HDD-1	1 Enabled	libsmbios name + BIOS DA table
+0x011A	Serial ATA Drive 1 (AUTO)	true	0x0001	0x0461	0x0220	DellSataEnable1	HDD-1	1 Enabled	libsmbios name + BIOS DA table
+0x011B	Serial ATA Drive 2 (OFF)	false	0x0000	0x0462	0x0221	DellSataEnable2	HDD-2	1 Enabled	libsmbios name + BIOS DA table
+0x011C	Serial ATA Drive 2 (AUTO)	true	0x0001	0x0462	0x0221	DellSataEnable2	HDD-2	1 Enabled	libsmbios name + BIOS DA table
+0x011D	Serial ATA Drive 3 (OFF)	false	0x0000	0x0463	0x0222	DellSataEnable3	HDD-3	1 Enabled	libsmbios name + BIOS DA table
+0x011E	Serial ATA Drive 3 (AUTO)	true	0x0001	0x0463	0x0222	DellSataEnable3	HDD-3	1 Enabled	libsmbios name + BIOS DA table
+0x011F	Serial ATA Drive 4 (OFF)	false	0x0000	0x0464	0x0223	DellSataEnable4	ODD-0	1 Enabled	libsmbios name + BIOS DA table
+0x0120	Serial ATA Drive 4 (AUTO)	true	0x0001	0x0464	0x0223	DellSataEnable4	ODD-0	1 Enabled	libsmbios name + BIOS DA table
+0x0121	Serial ATA Drive 5 (OFF)	false	0x0000	0x0465	0x0224	DellSataEnable5	ODD-1	1 Enabled	libsmbios name + BIOS DA table
+0x0122	Serial ATA Drive 5 (AUTO)	true	0x0001	0x0465	0x0224	DellSataEnable5	ODD-1	1 Enabled	libsmbios name + BIOS DA table
+0x012B	SMART Errors (Enable)	false	0x0001	0x045B	0x0206	DellSmartReportingEn			libsmbios name + BIOS DA table
+0x012C	SMART Errors (Disable)	true	0x0000	0x045B	0x0206	DellSmartReportingEn			libsmbios name + BIOS DA table
+0x012D	Energy Star Logo (Enable)	false	0x0001	0x0481	0x0063	DellLogoEStar		0 Disabled	libsmbios name + BIOS DA table
+0x012E	Energy Star Logo (Disable)	true	0x0000	0x0481	0x0063	DellLogoEStar		0 Disabled	libsmbios name + BIOS DA table
+0x0135	SATA Controller (OFF)	false	0x00FF	0x045A	0x01B3	SataInterfaceMode			libsmbios name + BIOS DA table
+0x0137	SATA Controller (ATA)	false	0x0000	0x045A	0x01B3	SataInterfaceMode			libsmbios name + BIOS DA table
+0x0138	SATA Controller (AHCI)	true	0x0001	0x045A	0x01B3	SataInterfaceMode			libsmbios name + BIOS DA table
+0x0139	SATA Controller (RAID)	false	0x0002	0x045A	0x01B3	SataInterfaceMode			libsmbios name + BIOS DA table
+0x0140	CPU XD Support (Off)		0x0000	0x0C70	0x0281	ExecuteDisableBit	Enable CPU XD Support	1 Enabled	libsmbios name + BIOS DA table
+0x0141	CPU XD Support (Enabled)		0x0001	0x0C70	0x0281	ExecuteDisableBit	Enable CPU XD Support	1 Enabled	libsmbios name + BIOS DA table
+0x0144	TPM Enable (Off)		0x0000	0x0442	0x0271	TpmSupport	TPM Support in BIOS	0 Disable	libsmbios name + BIOS DA table
+0x0145	TPM Enable (Enabled)		0x0001	0x0442	0x0271	TpmSupport	TPM Support in BIOS	0 Disable	libsmbios name + BIOS DA table
+0x0146	USB Wake Support (Off)		0x0000	0x0601	0x018D	DellUsbWakeSupport			libsmbios name + BIOS DA table
+0x0147	USB Wake Support (Enabled)		0x0001	0x0601	0x018D	DellUsbWakeSupport			libsmbios name + BIOS DA table
+0x014A	CPU Virtualization (Disabled)		0x0000	0x0437	0x027F	VT			libsmbios name + BIOS DA table
+0x014B	CPU Virtualization (Enabled)		0x0001	0x0437	0x027F	VT			libsmbios name + BIOS DA table
+0x014E	Front USB Ports (Disabled)		0x0000	0x0658	0x0209	DellFrontUsbPortEn	Enable Front USB Ports	1 Enabled	libsmbios name + BIOS DA table
+0x014F	Front USB Ports (Enabled)		0x0001	0x0658	0x0209	DellFrontUsbPortEn	Enable Front USB Ports	1 Enabled	libsmbios name + BIOS DA table
+0x0154	SERR DMI Message (Off)		0x0000	0x060F	0x00AF	SERR	Enable SERR Messages	0 Disabled	libsmbios name + BIOS DA table
+0x0155	SERR DMI Message (On)		0x0001	0x060F	0x00AF	SERR	Enable SERR Messages	0 Disabled	libsmbios name + BIOS DA table
+0x0168	Limit CPUID Value (Off)		0x0000	0x0C72	0x0180	DellLimitCpuid	Enable CPUID Limit	0 Disabled	libsmbios name + BIOS DA table
+0x0169	Limit CPUID Value (On)		0x0001	0x0C72	0x0180	DellLimitCpuid	Enable CPUID Limit	0 Disabled	libsmbios name + BIOS DA table
+0x0171	Adjacent Cache Line Prefetch (Disabled)		0x0000	0x0475	0x028F	MlcSpatialPrefetcherEnable	Adjacent Cache Prefetch	1 Enabled	libsmbios name + BIOS DA table
+0x0172	Adjacent Cache Line Prefetch (Enabled)		0x0001	0x0475	0x028F	MlcSpatialPrefetcherEnable	Adjacent Cache Prefetch	1 Enabled	libsmbios name + BIOS DA table
+0x0173	Hardware Prefetcher (Disabled)		0x0000	0x0474	0x028E	MlcStreamerPrefetcherEnable	Hardware Prefetcher	1 Enabled	libsmbios name + BIOS DA table
+0x0174	Hardware Prefetcher (Enabled)		0x0001	0x0474	0x028E	MlcStreamerPrefetcherEnable	Hardware Prefetcher	1 Enabled	libsmbios name + BIOS DA table
+0x019B	Password Bypass (Off)		0x0000	0x0643	0x01E3	DellPwdBypass			libsmbios name + BIOS DA table
+0x019C	Password Bypass (Reboot Bypass)		0x0001	0x0643	0x01E3	DellPwdBypass			libsmbios name + BIOS DA table
+0x01C4	Node Interleave (Disabled)		0x0000	0x0665	0x017B	DellNUMAMode			libsmbios name + BIOS DA table
+0x01C5	Node Interleave (Enabled)		0x0001	0x0665	0x017B	DellNUMAMode			libsmbios name + BIOS DA table
+0x01E8	MEBx Hotkey (Off)		0x0000	0x0451	0x0255	DellMebxHotkey	Enable MEBx Hotkey	1 Enabled	libsmbios name + BIOS DA table
+0x01E9	MEBx Hotkey (On)		0x0001	0x0451	0x0255	DellMebxHotkey	Enable MEBx Hotkey	1 Enabled	libsmbios name + BIOS DA table
+0x01EA	Core-Based Turbo Mode (Off)		0x0000	0x0C7C	0x0179	EnableTurboMode			libsmbios name + BIOS DA table
+0x01EB	Core-Based Turbo Mode (Enabled)		0x0001	0x0C7C	0x0179	EnableTurboMode			libsmbios name + BIOS DA table
+0x0202	Trusted Execution (Off)	true	0x0000	0x0471	0x028D	ITXT_SUPPORT	Trusted Execution	0 Disabled	libsmbios name + BIOS DA table
+0x0203	Trusted Execution (On)	false	0x0001	0x0471	0x028D	ITXT_SUPPORT	Trusted Execution	0 Disabled	libsmbios name + BIOS DA table
+0x0204	VT for Direct I/O (Off)	false	0x0000	0x0472	0x0280	EnableVtd			libsmbios name + BIOS DA table
+0x0205	VT for Direct I/O (On)	true	0x0001	0x0472	0x0280	EnableVtd			libsmbios name + BIOS DA table
+0x022D	Boot Mode (UEFI)	true	0x0001	0x048B	0x00DB	BootList	Boot List	1 UEFI	libsmbios name + BIOS DA table
+0x022E	Boot Mode (BIOS)	false	0x0000	0x048B	0x00DB	BootList	Boot List	1 UEFI	libsmbios name + BIOS DA table
+0x0231	NUMBER OF CORES PER PROCESSOR (4 Cores)	false	0x0004	0x0435	0x0284	?	Active Processor Cores	0 All	libsmbios name + BIOS DA table
+0x0232	NUMBER OF CORES PER PROCESSOR (2 Cores)	false	0x0002	0x0435	0x0284	?	Active Processor Cores	0 All	libsmbios name + BIOS DA table
+0x0233	NUMBER OF CORES PER PROCESSOR (1 Core)	false	0x0001	0x0435	0x0284	?	Active Processor Cores	0 All	libsmbios name + BIOS DA table
+0x024A	Trusted Platform Module (Activate)	false	0x0001	0x04C0	0x0065	TpmDeactivateState		0 Disabled	libsmbios name + BIOS DA table
+0x024B	C States Control (Enabled)	true	0x0001	0x0C76	0x0178	EnableCx	C states	1 Enabled	libsmbios name + BIOS DA table
+0x024C	C States Control (Disabled)	false	0x0000	0x0C76	0x0178	EnableCx	C states	1 Enabled	libsmbios name + BIOS DA table
+0x0264	Password Length Restriction (ON)	false	0x0001	0x04D2					libsmbios name + BIOS DA table
+0x0265	Password Length Restriction (OFF)	true	0x0000	0x04D2					libsmbios name + BIOS DA table
+0x0266	Boot Menu Restriction (ON)	false	0x0001	0x04D3					libsmbios name + BIOS DA table
+0x0267	Boot Menu Restriction (OFF)	true	0x0000	0x04D3					libsmbios name + BIOS DA table
+0x0268	Flash Restriction (ON)	false	0x0001	0x04D5					libsmbios name + BIOS DA table
+0x0269	Flash Restriction (OFF)	true	0x0000	0x04D5					libsmbios name + BIOS DA table
+0x026C	Alt System Name (ON)	false	0x0001	0x04D6					libsmbios name + BIOS DA table
+0x026D	Alt System Name (OFF)	true	0x0000	0x04D6					libsmbios name + BIOS DA table
+0x026E	Number of Cores per Processor (All)	true	0x0000	0x0435	0x0284	?	Active Processor Cores	0 All	libsmbios name + BIOS DA table
+0x0275	Internal USB Port 1 (Disabled)	false	0x0000	0x0671	0x01FC	DellIntUsbPortEn	Enable Internal USB Port	1 Enabled	libsmbios name + BIOS DA table
+0x0276	Internal USB Port 1 (Enabled)	true	0x0001	0x0671	0x01FC	DellIntUsbPortEn	Enable Internal USB Port	1 Enabled	libsmbios name + BIOS DA table
+0x02A3	USB 3.0 (Enabled)	true	0x0001	0x0668	0x020A	DellUSB30UsbPortEn	Enable USB 3.0 (XHCI) on Super Speed Ports	1 Enabled	libsmbios name + BIOS DA table
+0x02A4	USB 3.0 (Disabled)	false	0x0000	0x0668	0x020A	DellUSB30UsbPortEn	Enable USB 3.0 (XHCI) on Super Speed Ports	1 Enabled	libsmbios name + BIOS DA table
+0x02A7	Strong Password (Enabled)	false	0x0001	0x0653	0x01D3	DellEnableStrongPasswords	Enable Strong Password	0 Disabled	libsmbios name + BIOS DA table
+0x02A8	Strong Password (Disabled)	true	0x0000	0x0653	0x01D3	DellEnableStrongPasswords	Enable Strong Password	0 Disabled	libsmbios name + BIOS DA table
+0x02BD	Admin Setup Lockout (Enabled)	false	0x0001	0x0652	0x01D2	DellAdminSetupLockout	Enable Admin Setup Lockout	0 Disabled	libsmbios name + BIOS DA table
+0x02BE	Admin Setup Lockout (Disabled)	true	0x0000	0x0652	0x01D2	DellAdminSetupLockout	Enable Admin Setup Lockout	0 Disabled	libsmbios name + BIOS DA table
+0x02CD	Clear GPE Ownership (Clear GPE Ownership)	false	0x0001	0x044C	0x01E5	GpeClearOwner			libsmbios name + BIOS DA table
+0x02D8	AdminPwdMaxLen (Variable)	false	0xFFFF	0x0655	0x01D5	DellStrongPasswordMaxLengthAdmin	Admin Password Max	32 	libsmbios name + BIOS DA table
+0x02D9	AdminPwdMinLen (Variable)	false	0xFFFF	0x0654	0x01D4	DellStrongPasswordMinLengthAdmin	Admin Password Min	4 	libsmbios name + BIOS DA table
+0x02DA	AdminStrongPwdMaxLen (Variable)	false	0xFFFF	0x0655	0x01D5	DellStrongPasswordMaxLengthAdmin	Admin Password Max	32 	libsmbios name + BIOS DA table
+0x02DB	AdminStrongPwdMinLen (Variable)	false	0xFFFF	0x0654	0x01D4	DellStrongPasswordMinLengthAdmin	Admin Password Min	4 	libsmbios name + BIOS DA table
+0x02DC	SystemPwdMaxLen (Variable)	false	0xFFFF	0x0657	0x01D7	DellStrongPasswordMaxLengthSystem	System Password Max	32 	libsmbios name + BIOS DA table
+0x02DD	SystemPwdMinLen (Variable)	false	0xFFFF	0x0656	0x01D6	DellStrongPasswordMinLengthSystem	System Password Min	4 	libsmbios name + BIOS DA table
+0x02DE	SystemStrongPwdMaxLen (Variable)	false	0xFFFF	0x0657	0x01D7	DellStrongPasswordMaxLengthSystem	System Password Max	32 	libsmbios name + BIOS DA table
+0x02DF	SystemStrongPwdMinLen (Variable)	false	0xFFFF	0x0656	0x01D6	DellStrongPasswordMinLengthSystem	System Password Min	4 	libsmbios name + BIOS DA table
+0x02E4	BlockS3 (Disable)	false	0x0000	0x047C	0x019F	BlockSleep			libsmbios name + BIOS DA table
+0x02E5	BlockS3 (Enable)	true	0x0001	0x047C	0x019F	BlockSleep			libsmbios name + BIOS DA table
+0x02FD	Fan Control Override (Enable)	false	0x0001	0x0429					libsmbios name + BIOS DA table
+0x02FE	Fan Control Override (Disable)	true	0x0000	0x0429					libsmbios name + BIOS DA table
+0x030F	Low Power Mode (S5Only)	false	0x0002	0x042A	0x027C	DeepSxMode	Deep Sleep	0 Disabled	libsmbios name + BIOS DA table
+0x0312	Auto-on (DayControl)	false	0x0003	0x0411	0x0188	DellAutoOnEnable			libsmbios name + BIOS DA table
+0x0313	Auto-on Sunday (Enable)	false	0x0001	0x04E1	0x0196	AutoOnSunday	Sunday	0 Disabled	libsmbios name + BIOS DA table
+0x0314	Auto-on Sunday (Disable)	true	0x0000	0x04E1	0x0196	AutoOnSunday	Sunday	0 Disabled	libsmbios name + BIOS DA table
+0x0315	Auto-on Monday (Enable)	false	0x0001	0x04E2	0x0197	AutoOnMonday	Monday	0 Disabled	libsmbios name + BIOS DA table
+0x0316	Auto-on Monday (Disable)	true	0x0000	0x04E2	0x0197	AutoOnMonday	Monday	0 Disabled	libsmbios name + BIOS DA table
+0x0317	Auto-on Tuesday (Enable)	false	0x0001	0x04E3	0x0198	AutoOnTuesday	Tuesday	0 Disabled	libsmbios name + BIOS DA table
+0x0318	Auto-on Tuesday (Disable)	true	0x0000	0x04E3	0x0198	AutoOnTuesday	Tuesday	0 Disabled	libsmbios name + BIOS DA table
+0x0319	Auto-on Wednesday (Enable)	false	0x0001	0x04E4	0x0199	AutoOnWednesday	Wednesday	0 Disabled	libsmbios name + BIOS DA table
+0x031A	Auto-on Wednesday (Disable)	true	0x0000	0x04E4	0x0199	AutoOnWednesday	Wednesday	0 Disabled	libsmbios name + BIOS DA table
+0x031B	Auto-on Thursday (Enable)	false	0x0001	0x04E5	0x019A	AutoOnThursday	Thursday	0 Disabled	libsmbios name + BIOS DA table
+0x031C	Auto-on Thursday (Disable)	true	0x0000	0x04E5	0x019A	AutoOnThursday	Thursday	0 Disabled	libsmbios name + BIOS DA table
+0x031D	Auto-on Friday (Enable)	false	0x0001	0x04E6	0x019B	AutoOnFriday	Friday	0 Disabled	libsmbios name + BIOS DA table
+0x031E	Auto-on Friday (Disable)	true	0x0000	0x04E6	0x019B	AutoOnFriday	Friday	0 Disabled	libsmbios name + BIOS DA table
+0x031F	Auto-on Saturday (Enable)	false	0x0001	0x04E7	0x019C	AutoOnSaturday	Saturday	0 Disabled	libsmbios name + BIOS DA table
+0x0320	Auto-on Saturday (Disable)	true	0x0000	0x04E7	0x019C	AutoOnSaturday	Saturday	0 Disabled	libsmbios name + BIOS DA table
+0x032D	Fault-Tolerant Memory (Enable)	true	0x0001	0x0669	0x0238	DellRMT			libsmbios name + BIOS DA table
+0x032E	Fault-Tolerant Memory (Disable)	false	0x0000	0x0669	0x0238	DellRMT			libsmbios name + BIOS DA table
+0x0332	Fan Speed (Auto)		0x0000	0x0427	0x018C	FanControlOverride			libsmbios name + BIOS DA table
+0x0335	Fan Speed (Low)		0x0002	0x0427	0x018C	FanControlOverride			libsmbios name + BIOS DA table
+0x0338	Dynamic Backlight Control (Enable)	false	0x0001	0x042D	0x01EC	DellChassisDoor		0 Disabled	libsmbios name + BIOS DA table
+0x0339	Dynamic Backlight Control (Disable)	false	0x0001	0x042D	0x01EC	DellChassisDoor		0 Disabled	libsmbios name + BIOS DA table
+0x034F	Secure Boot (Enable)	false	0x0001	0x041B					libsmbios name + BIOS DA table
+0x0351	HDD1 Fan Enable (Disable)	true	0x0000	0x040C	0x0290	DellHdd1Fan	HDD1 Fan Enable	0 Disabled	libsmbios name + BIOS DA table
+0x0352	HDD1 Fan Enable (Enable)	false	0x0001	0x040C	0x0290	DellHdd1Fan	HDD1 Fan Enable	0 Disabled	libsmbios name + BIOS DA table
+0x0357	Enable Legacy Option ROMs (Disabled)	false	0x0000	0x041C	0x025C	LegacyOpromSwitch	Enable Legacy Option ROMs	1 Enabled	libsmbios name + BIOS DA table
+0x0358	Enable Legacy Option ROMs (Enabled)	true	0x0001	0x041C	0x025C	LegacyOpromSwitch	Enable Legacy Option ROMs	1 Enabled	libsmbios name + BIOS DA table
+0x0361	UEFI Network Stack (Enable)	false	0x0001	0x040F					libsmbios name + BIOS DA table
+0x0362	UEFI Network Stack (Disable)	true	0x0000	0x040F					libsmbios name + BIOS DA table
+0x0369	OROM Keyboard Access (Disable)	false	0x0000	0x0661	0x01D8	DellOromKeyboardAccess			libsmbios name + BIOS DA table
+0x036A	OROM Keyboard Access (Enable)	true	0x0001	0x0661	0x01D8	DellOromKeyboardAccess			libsmbios name + BIOS DA table
+0x036B	OROM Keyboard Access (Onetime Enable)	false	0x0002	0x0661	0x01D8	DellOromKeyboardAccess			libsmbios name + BIOS DA table
+0x036F	Primary Video Device Slot (Value)	false	0xFFFF	0x0E1E	0x027D	DellPrimaryVideoSlot			libsmbios name + BIOS DA table
+0x0381	MmioAbove4Gb (Disable)	false	0x0000	0x0E1F	0x002A	Above4gDecode			libsmbios name + BIOS DA table
+0x0382	MmioAbove4Gb (Enable)	true	0x0001	0x0E1F	0x002A	Above4gDecode			libsmbios name + BIOS DA table
+0x0383	Wake On Lan (LAN with PXE Boot)	false	0x0007	0x0478	0x018E	DellWakeOnLanWlan			libsmbios name + BIOS DA table
+0x0384	Pci Mmio Size (Small)	true	0x0000	0x06A8	0x02B9	PCIMmioSpaceSize			libsmbios name + BIOS DA table
+0x0385	Pci Mmio Size (Large)	false	0x0001	0x06A8	0x02B9	PCIMmioSpaceSize			libsmbios name + BIOS DA table
+0x038A	Dell Wyse P25 Bios Access (On)	true	0x0001	0x066B	0x02A0	DellP25			libsmbios name + BIOS DA table
+0x038B	Dell Wyse P25 Bios Access (Off)	false	0x0000	0x066B	0x02A0	DellP25			libsmbios name + BIOS DA table
+0x03A2	Thunderbolt (Enabled)	false	0x0001	0x06A9	0x029F	Thunderbolt			libsmbios name + BIOS DA table
+0x03A3	Thunderbolt (Disabled)	true	0x0000	0x06A9	0x029F	Thunderbolt			libsmbios name + BIOS DA table
+0x03BE	Processor Core Count (Value)	false	0xFFFF	0x0435	0x0284	?	Active Processor Cores	0 All	libsmbios name + BIOS DA table
+0x03C1	Thunderbolt Security Level (UserAuthorization)	true	0x0001	0x06AA	0x02A9	TbtSecurityLevel	Security Level	1 User Authorization	libsmbios name + BIOS DA table
+0x03C2	Thunderbolt Security Level (SecureConnect)	false	0x0002	0x06AA	0x02A9	TbtSecurityLevel	Security Level	1 User Authorization	libsmbios name + BIOS DA table
+0x03C3	Thunderbolt Security Level (DisplayPortOnly)	false	0x0003	0x06AA	0x02A9	TbtSecurityLevel	Security Level	1 User Authorization	libsmbios name + BIOS DA table
+0x03C4	Auto Fan Speed Intensity (Value)	false	0xFFFF	0x0E21	0x03EE	FanControlOverride2			libsmbios name + BIOS DA table
+0x03C5	Thunderbolt Security Level (NoSecurity)	false	0x0000	0x06AA	0x02A9	TbtSecurityLevel	Security Level	1 User Authorization	libsmbios name + BIOS DA table
+0x03CF	Liquid Cooler 1 (Enabled)	false	0x0001	0x0559	0x03EC	DellLiquidCooler1	Liquid Cooler1 Enable	0 Disabled	libsmbios name + BIOS DA table
+0x03D0	Liquid Cooler 1 (Disabled)	true	0x0000	0x0559	0x03EC	DellLiquidCooler1	Liquid Cooler1 Enable	0 Disabled	libsmbios name + BIOS DA table
+0x03D1	Liquid Cooler 2 (Enabled)	false	0x0001	0x055A	0x03ED	DellLiquidCooler2	Liquid Cooler2 Enable	0 Disabled	libsmbios name + BIOS DA table
+0x03D2	Liquid Cooler 2 (Disabled)	true	0x0000	0x055A	0x03ED	DellLiquidCooler2	Liquid Cooler2 Enable	0 Disabled	libsmbios name + BIOS DA table
+0x041A	Rear USB Ports (Enable)	true	0x0001	0x06A7	0x020B	DellRearUsbPortEn	Enable Rear USB Ports	1 Enabled	libsmbios name + BIOS DA table
+0x041B	Rear USB Ports (Disable)	false	0x0000	0x06A7	0x020B	DellRearUsbPortEn	Enable Rear USB Ports	1 Enabled	libsmbios name + BIOS DA table
+0x0421	PCI MMIO Size (Value)	false	0x0002	0x06A8	0x02B9	PCIMmioSpaceSize			libsmbios name + BIOS DA table
+0x0428	Active State Power Management (Auto)	false	0x0004	0x0E37	0x005E	PcieAspm	ASPM	0 Disabled	libsmbios name + BIOS DA table
+0x0429	Active State Power Management (Disable)	true	0x0000	0x0E37	0x005E	PcieAspm	ASPM	0 Disabled	libsmbios name + BIOS DA table
+0x042A	Active State Power Management (L1)	false	0x0002	0x0E37	0x005E	PcieAspm	ASPM	0 Disabled	libsmbios name + BIOS DA table
+0x042B	TPM Hash Algorithm (Value)	false	0xFFFF	0x055F	0x02BF	ShaPolicy	SHA-256	1 Enabled	libsmbios name + BIOS DA table
+0x042C	CPU Snoop Mode (Early)	false	0x0001	0x06C7	0x03E8	CpuSnoopMode			libsmbios name + BIOS DA table
+0x042D	CPU Snoop Mode (Home)	false	0x0000	0x06C7	0x03E8	CpuSnoopMode			libsmbios name + BIOS DA table
+0x042E	System Isochronous Mode (Enabled)	false	0x0001	0x06C8	0x03E9	SysIsocMode			libsmbios name + BIOS DA table
+0x042F	System Isochronous Mode (Disabled)	true	0x0000	0x06C8	0x03E9	SysIsocMode			libsmbios name + BIOS DA table
+0x0430	CPU Snoop Mode (ClusterOnDie)	false	0x0003	0x06C7	0x03E8	CpuSnoopMode			libsmbios name + BIOS DA table
+0x045D	CPU Snoop Mode (Opportunistic)	false	0x0002	0x06C7	0x03E8	CpuSnoopMode			libsmbios name + BIOS DA table
+0x0487	Master Password Lockout (Enabled)	true	0x0001	0x0733	0x02D6	UnusedSetupData_Byte_29	Enable Master Password Lockout	0 Disabled	NVRAM diff on archy: activating it set Setup 0x02D6 0 -> 1; DellPolicyDxe map 0x0733 -> Setup 0x02D6
+0x0488	Master Password Lockout (Disabled)	false	0x0000	0x0733	0x02D6	UnusedSetupData_Byte_29	Enable Master Password Lockout	0 Disabled	DellPolicyDxe map 0x0733 -> Setup 0x02D6, value 0; the firmware takes it from the OS as a no-op
+0x0498	UEFI Boot Path Security (Value)	false	0xFFFF	0x06DA	0x02D5	DellSecUefiBootPaths			DellPolicyDxe map 0x06DA -> Setup 0x02D5 (DellSecUefiBootPaths): 0 Never, 1 Always, 2 Always Except Internal HDD; value 0xFFFF marks a value token; read-only SMI read: current 2, range 0..2 (= Always, Except Internal HDD, the default)
+0x04A7	PCIe LinkSpeed (Auto)	false	0x0003	0x0E38	0x005F	LinkSpeed	Pcie LinkSpeed	0 Gen3	DellPolicyDxe map 0x0E38 -> Setup 0x005F (LinkSpeed), value 3 = Auto; SMI read of the setting returns 0 = Gen3 (no token); Dell Command | Configure --PcieLinkSpeed takes Auto, Gen1, Gen2 (no Gen3), T5810 manual Engineering Configurations
+0x04A8	PCIe LinkSpeed (Gen1)	false	0x0001	0x0E38	0x005F	LinkSpeed	Pcie LinkSpeed	0 Gen3	same setting, value 1 = Gen1; Dell Command | Configure --PcieLinkSpeed takes Auto, Gen1, Gen2 (no Gen3), T5810 manual Engineering Configurations
+0x04A9	PCIe LinkSpeed (Gen2)	false	0x0002	0x0E38	0x005F	LinkSpeed	Pcie LinkSpeed	0 Gen3	same setting, value 2 = Gen2; Dell Command | Configure --PcieLinkSpeed takes Auto, Gen1, Gen2 (no Gen3), T5810 manual Engineering Configurations
+0x8000	Chassis Intrusion (Tripped)	true	0x0000	0x048E					libsmbios name + BIOS DA table
+0x8002	Chassis Intrusion (Door Open)	false	0x0002	0x048E					libsmbios name + BIOS DA table
+0x8003	Chassis Intrusion (Door Closed)	false	0x0003	0x048E					libsmbios name + BIOS DA table
+0x800C	Trusted Platform Module (Deactivated)	true	0x0000	0x04C0	0x0065	TpmDeactivateState		0 Disabled	libsmbios name + BIOS DA table
+0x800E	Trusted Platform Module (Owned)	false	0x0001	0x955D					libsmbios name + BIOS DA table
+0xA000	Chassis Intrusion (Trip Reset)		0x0001	0x048F					libsmbios name + BIOS DA table
+0xF100	EC sensor read: temperature sensor 0 (CPU), temperature, raw (C + 127)	false	0x0001	0x0E1C					read-only SMI token read on archy (class 0 select 0): F100/F120/F130 = 172/159/163 vs dell_smm CPU/temp3/temp4 45/32/36 C (raw - 127, 6 points); fields 1, 4, 6, 7 unsupported; public: HWiNFO forum 7482 (0xF100.. temperatures), setting 0x0E1C is code-handled
+0xF102	EC sensor read: temperature sensor 0 (CPU), field 2 (reads 3)	false	0x0001	0x0E1C					read-only SMI token read on archy (class 0 select 0): F100/F120/F130 = 172/159/163 vs dell_smm CPU/temp3/temp4 45/32/36 C (raw - 127, 6 points); fields 1, 4, 6, 7 unsupported; public: HWiNFO forum 7482 (0xF100.. temperatures), setting 0x0E1C is code-handled
+0xF103	EC sensor read: temperature sensor 0 (CPU), threshold, likely warning (raw C + 127)	false	0x0001	0x0E1C					read-only SMI token read on archy (class 0 select 0): F100/F120/F130 = 172/159/163 vs dell_smm CPU/temp3/temp4 45/32/36 C (raw - 127, 6 points); fields 1, 4, 6, 7 unsupported; public: HWiNFO forum 7482 (0xF100.. temperatures), setting 0x0E1C is code-handled
+0xF105	EC sensor read: temperature sensor 0 (CPU), threshold, likely critical (raw C + 127)	false	0x0001	0x0E1C					read-only SMI token read on archy (class 0 select 0): F100/F120/F130 = 172/159/163 vs dell_smm CPU/temp3/temp4 45/32/36 C (raw - 127, 6 points); fields 1, 4, 6, 7 unsupported; public: HWiNFO forum 7482 (0xF100.. temperatures), setting 0x0E1C is code-handled
+0xF120	EC sensor read: temperature sensor 2 (memory (i8k temp3)), temperature, raw (C + 127)	false	0x0001	0x0E1C					read-only SMI token read on archy (class 0 select 0): F100/F120/F130 = 172/159/163 vs dell_smm CPU/temp3/temp4 45/32/36 C (raw - 127, 6 points); fields 1, 4, 6, 7 unsupported; public: HWiNFO forum 7482 (0xF100.. temperatures), setting 0x0E1C is code-handled
+0xF122	EC sensor read: temperature sensor 2 (memory (i8k temp3)), field 2 (reads 3)	false	0x0001	0x0E1C					read-only SMI token read on archy (class 0 select 0): F100/F120/F130 = 172/159/163 vs dell_smm CPU/temp3/temp4 45/32/36 C (raw - 127, 6 points); fields 1, 4, 6, 7 unsupported; public: HWiNFO forum 7482 (0xF100.. temperatures), setting 0x0E1C is code-handled
+0xF123	EC sensor read: temperature sensor 2 (memory (i8k temp3)), threshold, likely warning (raw C + 127)	false	0x0001	0x0E1C					read-only SMI token read on archy (class 0 select 0): F100/F120/F130 = 172/159/163 vs dell_smm CPU/temp3/temp4 45/32/36 C (raw - 127, 6 points); fields 1, 4, 6, 7 unsupported; public: HWiNFO forum 7482 (0xF100.. temperatures), setting 0x0E1C is code-handled
+0xF125	EC sensor read: temperature sensor 2 (memory (i8k temp3)), threshold, likely critical (raw C + 127)	false	0x0001	0x0E1C					read-only SMI token read on archy (class 0 select 0): F100/F120/F130 = 172/159/163 vs dell_smm CPU/temp3/temp4 45/32/36 C (raw - 127, 6 points); fields 1, 4, 6, 7 unsupported; public: HWiNFO forum 7482 (0xF100.. temperatures), setting 0x0E1C is code-handled
+0xF130	EC sensor read: temperature sensor 3 (memory (i8k temp4)), temperature, raw (C + 127)	false	0x0001	0x0E1C					read-only SMI token read on archy (class 0 select 0): F100/F120/F130 = 172/159/163 vs dell_smm CPU/temp3/temp4 45/32/36 C (raw - 127, 6 points); fields 1, 4, 6, 7 unsupported; public: HWiNFO forum 7482 (0xF100.. temperatures), setting 0x0E1C is code-handled
+0xF132	EC sensor read: temperature sensor 3 (memory (i8k temp4)), field 2 (reads 3)	false	0x0001	0x0E1C					read-only SMI token read on archy (class 0 select 0): F100/F120/F130 = 172/159/163 vs dell_smm CPU/temp3/temp4 45/32/36 C (raw - 127, 6 points); fields 1, 4, 6, 7 unsupported; public: HWiNFO forum 7482 (0xF100.. temperatures), setting 0x0E1C is code-handled
+0xF133	EC sensor read: temperature sensor 3 (memory (i8k temp4)), threshold, likely warning (raw C + 127)	false	0x0001	0x0E1C					read-only SMI token read on archy (class 0 select 0): F100/F120/F130 = 172/159/163 vs dell_smm CPU/temp3/temp4 45/32/36 C (raw - 127, 6 points); fields 1, 4, 6, 7 unsupported; public: HWiNFO forum 7482 (0xF100.. temperatures), setting 0x0E1C is code-handled
+0xF135	EC sensor read: temperature sensor 3 (memory (i8k temp4)), threshold, likely critical (raw C + 127)	false	0x0001	0x0E1C					read-only SMI token read on archy (class 0 select 0): F100/F120/F130 = 172/159/163 vs dell_smm CPU/temp3/temp4 45/32/36 C (raw - 127, 6 points); fields 1, 4, 6, 7 unsupported; public: HWiNFO forum 7482 (0xF100.. temperatures), setting 0x0E1C is code-handled
+0xF600	EC sensor read: fan 0 (processor fan), fan speed (RPM)	false	0x0001	0x0E1C					read-only SMI token read on archy: F600 = 1005/1004/1000 = dell_smm Processor Fan RPM at the same moments; fields 3 and 5 unsupported; public: DellFanManagement Token.cs Fan1Rpm = 0xF600
+0xF601	EC sensor read: fan 0 (processor fan), field 1 (reads 3)	false	0x0001	0x0E1C					read-only SMI token read on archy: F600 = 1005/1004/1000 = dell_smm Processor Fan RPM at the same moments; fields 3 and 5 unsupported; public: DellFanManagement Token.cs Fan1Rpm = 0xF600
+0xF602	EC sensor read: fan 0 (processor fan), field 2 (reads 96)	false	0x0001	0x0E1C					read-only SMI token read on archy: F600 = 1005/1004/1000 = dell_smm Processor Fan RPM at the same moments; fields 3 and 5 unsupported; public: DellFanManagement Token.cs Fan1Rpm = 0xF600
+0xF604	EC sensor read: fan 0 (processor fan), field 4 (reads 100)	false	0x0001	0x0E1C					read-only SMI token read on archy: F600 = 1005/1004/1000 = dell_smm Processor Fan RPM at the same moments; fields 3 and 5 unsupported; public: DellFanManagement Token.cs Fan1Rpm = 0xF600
+token	name (libsmbios)	active on archy	value written	DELL SETTING ID					libsmbios name + BIOS DA table
