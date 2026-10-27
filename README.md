@@ -37,6 +37,7 @@ adds them to `doc/token_list.csv`.
 5. **Exception.** Setting 0x0E1C has no `Setup` byte. It marks tokens answered in code: the 0xF1xx/0xF6xx embedded-controller sensor
    reads, and the power-supply LED blink tokens. The sensor values come from `PwsEcSmm` (Dell Pws EC driver), which also carries
    0x0E1C. That driver shadows the EC registers and holds the probe names `CPU_TEMPERATURE`, `VIDEO_TEMPERATURE` and `CPU_THROTTLE`.
+   It takes its thermal configuration from the protocol `DellThermInfoConfigSmm` installs (GUID 4093DA92-61D2-47EC-A0CA-0640433CEDB0).
    The calling-interface handler just fetches the value by ID. Neither binary has a per-field switch, so the field meanings below
    come from live reads.
 
